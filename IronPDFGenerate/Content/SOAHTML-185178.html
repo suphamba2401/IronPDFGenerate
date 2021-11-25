@@ -1,0 +1,891 @@
+<p><meta charset="utf-8"></p><style>/*!
+ * froala_editor v3.1.0 (https://www.froala.com/wysiwyg-editor)
+ * License https://froala.com/wysiwyg-editor/terms/
+ * Copyright 2014-2020 Froala Labs
+ */
+
+.clearfix::after{clear:both;display:block;content:"";height:0}.hide-by-clipping{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.fr-element,.fr-element:focus{outline:0 solid transparent}.fr-box.fr-basic{border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-box.fr-basic .fr-element{font-family:sans-serif;color:#414141;font-size:14px;line-height:1.6;padding:20px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;overflow-x:auto;min-height:60px;text-align:left}.fr-box.fr-basic.fr-rtl .fr-element{text-align:right}.fr-element{background:transparent;position:relative;z-index:2;-webkit-user-select:auto}.fr-element a{user-select:auto;-o-user-select:auto;-moz-user-select:auto;-khtml-user-select:auto;-webkit-user-select:auto;-ms-user-select:auto}.fr-element.fr-disabled{user-select:none;-o-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none}.fr-element [contenteditable="true"]{outline:0 solid transparent}.fr-box a.fr-floating-btn{-webkit-box-shadow:0 3px 1px -2px rgba(0,0,0,0.2),0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12);-moz-box-shadow:0 3px 1px -2px rgba(0,0,0,0.2),0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12);box-shadow:0 3px 1px -2px rgba(0,0,0,0.2),0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12);border-radius:100%;-moz-border-radius:100%;-webkit-border-radius:100%;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;height:40px;width:40px;text-align:center;background:#FFF;color:#2C4560;-webkit-transition:background 0.2s ease 0s, color 0.2s ease 0s, transform 0.2s ease 0s;-moz-transition:background 0.2s ease 0s, color 0.2s ease 0s, transform 0.2s ease 0s;-ms-transition:background 0.2s ease 0s, color 0.2s ease 0s, transform 0.2s ease 0s;-o-transition:background 0.2s ease 0s, color 0.2s ease 0s, transform 0.2s ease 0s;outline:none;left:0;top:0;line-height:40px;-webkit-transform:scale(0);-moz-transform:scale(0);-ms-transform:scale(0);-o-transform:scale(0);text-align:center;display:block;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border:none}.fr-box a.fr-floating-btn svg{-webkit-transition:transform 0.2s ease 0s;-moz-transition:transform 0.2s ease 0s;-ms-transition:transform 0.2s ease 0s;-o-transition:transform 0.2s ease 0s;fill:#2C4560}.fr-box a.fr-floating-btn i,.fr-box a.fr-floating-btn svg{font-size:14px;line-height:40px}.fr-box a.fr-floating-btn.fr-btn+.fr-btn{margin-left:10px}.fr-box a.fr-floating-btn:hover{background:#ebebeb;cursor:pointer}.fr-box a.fr-floating-btn:hover svg{fill:#2C4560}.fr-box .fr-visible a.fr-floating-btn{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1)}iframe.fr-iframe{width:100%;border:none;position:relative;display:block;z-index:2;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.fr-wrapper{position:relative;z-index:1}.fr-wrapper::after{clear:both;display:block;content:"";height:0}.fr-wrapper .fr-placeholder{position:absolute;font-size:14px;color:#AAA;font-family:sans-serif;z-index:1;display:none;top:0;left:0;right:0;overflow:hidden}.fr-wrapper.show-placeholder .fr-placeholder{display:block;white-space:nowrap;text-overflow:ellipsis}.fr-wrapper ::-moz-selection{background:#b5d6fd;color:#000}.fr-wrapper ::selection{background:#b5d6fd;color:#000}.fr-box.fr-basic .fr-wrapper{background:#FFF;border:1px solid #D4E1F0;border-bottom-color:#efefef;top:0;left:0}.fr-box.fr-basic.fr-top .fr-wrapper{border-top:0}.fr-box.fr-basic.fr-bottom .fr-wrapper{border-bottom:0;border-radius:10px 10px 0 0;-moz-border-radius:10px 10px 0 0;-webkit-border-radius:10px 10px 0 0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}@media (min-width: 992px){.fr-box.fr-document{min-width:21cm}.fr-box.fr-document .fr-wrapper{text-align:left;padding:30px;min-width:21cm;background:#efefef}.fr-box.fr-document .fr-wrapper .fr-element{text-align:left;background:#FFF;width:21cm;margin:auto;min-height:26cm !important;padding:1cm 2cm;overflow:visible;z-index:auto}.fr-box.fr-document .fr-wrapper .fr-element hr{margin-left:-2cm;margin-right:-2cm;background:#efefef;height:1cm;outline:none;border:none}.fr-box.fr-document .fr-wrapper .fr-element img{z-index:1}}.fr-tooltip{position:absolute;top:0;left:0;padding:0 8px;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;background:#222222;color:#FFF;font-size:11px;line-height:22px;font-family:Arial, Helvetica, sans-serif;-webkit-transition:opacity 0.2s ease 0s;-moz-transition:opacity 0.2s ease 0s;-ms-transition:opacity 0.2s ease 0s;-o-transition:opacity 0.2s ease 0s;-webkit-opacity:0;-moz-opacity:0;opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";left:-3000px;user-select:none;-o-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;z-index:2147483647;text-rendering:optimizelegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fr-tooltip.fr-visible{-webkit-opacity:1;-moz-opacity:1;opacity:1;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"}.fr-toolbar .fr-btn-wrap,.fr-popup .fr-btn-wrap,.fr-modal .fr-btn-wrap{float:left;white-space:nowrap;position:relative}.fr-toolbar .fr-btn-wrap.fr-hidden,.fr-popup .fr-btn-wrap.fr-hidden,.fr-modal .fr-btn-wrap.fr-hidden{display:none}.fr-toolbar .fr-command.fr-btn,.fr-popup .fr-command.fr-btn,.fr-modal .fr-command.fr-btn{background:transparent;color:#2C4560;-moz-outline:0;outline:none;border:0;line-height:1;cursor:pointer;text-align:left;margin:4px 2px;padding:0;-webkit-transition:all 0.5s;-moz-transition:all 0.5s;-ms-transition:all 0.5s;-o-transition:all 0.5s;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;z-index:2;position:relative;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;text-decoration:none;user-select:none;-o-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;float:left;height:40px}.fr-toolbar .fr-command.fr-btn.fr-dropdown.fr-options,.fr-popup .fr-command.fr-btn.fr-dropdown.fr-options,.fr-modal .fr-command.fr-btn.fr-dropdown.fr-options{border-radius:0 4px 4px 0;-moz-border-radius:0 4px 4px 0;-webkit-border-radius:0 4px 4px 0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-toolbar .fr-command.fr-btn.fr-btn-hover,.fr-popup .fr-command.fr-btn.fr-btn-hover,.fr-modal .fr-command.fr-btn.fr-btn-hover{border-radius:4px 0 0 4px;-moz-border-radius:4px 0 0 4px;-webkit-border-radius:4px 0 0 4px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-toolbar .fr-command.fr-btn::-moz-focus-inner,.fr-popup .fr-command.fr-btn::-moz-focus-inner,.fr-modal .fr-command.fr-btn::-moz-focus-inner{border:0;padding:0}.fr-toolbar .fr-command.fr-btn.fr-btn-text,.fr-popup .fr-command.fr-btn.fr-btn-text,.fr-modal .fr-command.fr-btn.fr-btn-text{width:auto}.fr-toolbar .fr-command.fr-btn i,.fr-toolbar .fr-command.fr-btn svg,.fr-popup .fr-command.fr-btn i,.fr-popup .fr-command.fr-btn svg,.fr-modal .fr-command.fr-btn i,.fr-modal .fr-command.fr-btn svg{display:block;text-align:center;float:none;margin:8px 7px;width:24px}.fr-toolbar .fr-command.fr-btn svg.fr-svg,.fr-popup .fr-command.fr-btn svg.fr-svg,.fr-modal .fr-command.fr-btn svg.fr-svg{height:24px}.fr-toolbar .fr-command.fr-btn svg path,.fr-popup .fr-command.fr-btn svg path,.fr-modal .fr-command.fr-btn svg path{-webkit-transition:all 0.5s;-moz-transition:all 0.5s;-ms-transition:all 0.5s;-o-transition:all 0.5s;fill:#2C4560}.fr-toolbar .fr-command.fr-btn span.fr-sr-only,.fr-popup .fr-command.fr-btn span.fr-sr-only,.fr-modal .fr-command.fr-btn span.fr-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.fr-toolbar .fr-command.fr-btn span,.fr-popup .fr-command.fr-btn span,.fr-modal .fr-command.fr-btn span{font-size:14px;display:block;line-height:17px;min-width:30px;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;height:17px;font-weight:bold;padding:0 4px}.fr-toolbar .fr-command.fr-btn img,.fr-popup .fr-command.fr-btn img,.fr-modal .fr-command.fr-btn img{margin:8px 7px;width:24px}.fr-toolbar .fr-command.fr-btn.fr-btn-active-popup,.fr-popup .fr-command.fr-btn.fr-btn-active-popup,.fr-modal .fr-command.fr-btn.fr-btn-active-popup{background:#d6d6d6}.fr-toolbar .fr-command.fr-btn.fr-dropdown.fr-selection span,.fr-popup .fr-command.fr-btn.fr-dropdown.fr-selection span,.fr-modal .fr-command.fr-btn.fr-dropdown.fr-selection span{font-weight:normal}.fr-toolbar .fr-command.fr-btn.fr-dropdown i,.fr-toolbar .fr-command.fr-btn.fr-dropdown span,.fr-toolbar .fr-command.fr-btn.fr-dropdown img,.fr-toolbar .fr-command.fr-btn.fr-dropdown svg,.fr-popup .fr-command.fr-btn.fr-dropdown i,.fr-popup .fr-command.fr-btn.fr-dropdown span,.fr-popup .fr-command.fr-btn.fr-dropdown img,.fr-popup .fr-command.fr-btn.fr-dropdown svg,.fr-modal .fr-command.fr-btn.fr-dropdown i,.fr-modal .fr-command.fr-btn.fr-dropdown span,.fr-modal .fr-command.fr-btn.fr-dropdown img,.fr-modal .fr-command.fr-btn.fr-dropdown svg{margin-left:3px;margin-right:11px}.fr-toolbar .fr-command.fr-btn.fr-dropdown:after,.fr-popup .fr-command.fr-btn.fr-dropdown:after,.fr-modal .fr-command.fr-btn.fr-dropdown:after{position:absolute;width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid #2C4560;right:2px;top:18px;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-ms-transition:all 0.3s;-o-transition:all 0.3s;content:""}.fr-toolbar .fr-command.fr-btn.fr-dropdown.fr-active,.fr-popup .fr-command.fr-btn.fr-dropdown.fr-active,.fr-modal .fr-command.fr-btn.fr-dropdown.fr-active{fill:#2C4560;background:#d6d6d6;-webkit-transition:0.5s ease;-moz-transition:0.5s ease;-ms-transition:0.5s ease;-o-transition:0.5s ease}.fr-toolbar .fr-command.fr-btn.fr-dropdown.fr-active:hover,.fr-popup .fr-command.fr-btn.fr-dropdown.fr-active:hover,.fr-modal .fr-command.fr-btn.fr-dropdown.fr-active:hover{background:#ebebeb;fill:#2C4560}.fr-toolbar .fr-command.fr-btn.fr-dropdown.fr-active:hover::after,.fr-popup .fr-command.fr-btn.fr-dropdown.fr-active:hover::after,.fr-modal .fr-command.fr-btn.fr-dropdown.fr-active:hover::after{border-top-color:#2C4560}.fr-toolbar .fr-command.fr-btn.fr-dropdown.fr-active:after,.fr-popup .fr-command.fr-btn.fr-dropdown.fr-active:after,.fr-modal .fr-command.fr-btn.fr-dropdown.fr-active:after{border-top:0;border-bottom:4px solid #222222}.fr-toolbar .fr-command.fr-btn.fr-disabled,.fr-popup .fr-command.fr-btn.fr-disabled,.fr-modal .fr-command.fr-btn.fr-disabled{color:#bdbdbd;cursor:default;-webkit-opacity:0.3;-moz-opacity:0.3;opacity:0.3;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"}.fr-toolbar .fr-command.fr-btn.fr-disabled::after,.fr-popup .fr-command.fr-btn.fr-disabled::after,.fr-modal .fr-command.fr-btn.fr-disabled::after{border-top-color:#bdbdbd}.fr-toolbar .fr-command.fr-btn.fr-hidden,.fr-popup .fr-command.fr-btn.fr-hidden,.fr-modal .fr-command.fr-btn.fr-hidden{display:none}.fr-toolbar .fr-tabs .fr-command.fr-btn,.fr-popup .fr-tabs .fr-command.fr-btn,.fr-modal .fr-tabs .fr-command.fr-btn{margin:0;width:46px;height:40px;border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-toolbar .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active,.fr-toolbar .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active-tab,.fr-popup .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active,.fr-popup .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active-tab,.fr-modal .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active,.fr-modal .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active-tab{background:#FFF}.fr-toolbar .fr-tabs .fr-command.fr-btn span,.fr-popup .fr-tabs .fr-command.fr-btn span,.fr-modal .fr-tabs .fr-command.fr-btn span{height:27px}.fr-toolbar .fr-tabs .fr-command.fr-btn img,.fr-toolbar .fr-tabs .fr-command.fr-btn svg,.fr-popup .fr-tabs .fr-command.fr-btn img,.fr-popup .fr-tabs .fr-command.fr-btn svg,.fr-modal .fr-tabs .fr-command.fr-btn img,.fr-modal .fr-tabs .fr-command.fr-btn svg{margin:8px 11px;width:24px;height:24px}.fr-toolbar .fr-btn-grp .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path,.fr-toolbar .fr-more-toolbar .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path,.fr-toolbar .fr-buttons:not(.fr-tabs) .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path,.fr-popup .fr-btn-grp .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path,.fr-popup .fr-more-toolbar .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path,.fr-popup .fr-buttons:not(.fr-tabs) .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path,.fr-modal .fr-btn-grp .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path,.fr-modal .fr-more-toolbar .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path,.fr-modal .fr-buttons:not(.fr-tabs) .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path{fill:#0098f7}.fr-toolbar.fr-disabled .fr-btn,.fr-toolbar.fr-disabled .fr-btn.fr-active,.fr-popup.fr-disabled .fr-btn,.fr-popup.fr-disabled .fr-btn.fr-active,.fr-modal.fr-disabled .fr-btn,.fr-modal.fr-disabled .fr-btn.fr-active{color:#bdbdbd;-webkit-opacity:0.3;-moz-opacity:0.3;opacity:0.3;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"}.fr-toolbar.fr-disabled .fr-btn.fr-dropdown::after,.fr-toolbar.fr-disabled .fr-btn.fr-active.fr-dropdown::after,.fr-popup.fr-disabled .fr-btn.fr-dropdown::after,.fr-popup.fr-disabled .fr-btn.fr-active.fr-dropdown::after,.fr-modal.fr-disabled .fr-btn.fr-dropdown::after,.fr-modal.fr-disabled .fr-btn.fr-active.fr-dropdown::after{border-top-color:#bdbdbd}.fr-toolbar.fr-rtl .fr-btn-grp.fr-float-left,.fr-popup.fr-rtl .fr-btn-grp.fr-float-left,.fr-modal.fr-rtl .fr-btn-grp.fr-float-left{float:right}.fr-toolbar.fr-rtl .fr-btn-grp.fr-float-right,.fr-popup.fr-rtl .fr-btn-grp.fr-float-right,.fr-modal.fr-rtl .fr-btn-grp.fr-float-right{float:left}.fr-toolbar.fr-rtl .fr-command.fr-btn,.fr-toolbar.fr-rtl .fr-btn-wrap,.fr-popup.fr-rtl .fr-command.fr-btn,.fr-popup.fr-rtl .fr-btn-wrap,.fr-modal.fr-rtl .fr-command.fr-btn,.fr-modal.fr-rtl .fr-btn-wrap{float:right}.fr-toolbar.fr-rtl .fr-command.fr-btn.fr-dropdown.fr-options,.fr-toolbar.fr-rtl .fr-btn-wrap.fr-dropdown.fr-options,.fr-popup.fr-rtl .fr-command.fr-btn.fr-dropdown.fr-options,.fr-popup.fr-rtl .fr-btn-wrap.fr-dropdown.fr-options,.fr-modal.fr-rtl .fr-command.fr-btn.fr-dropdown.fr-options,.fr-modal.fr-rtl .fr-btn-wrap.fr-dropdown.fr-options{border-radius:4px 0 0 4px;-moz-border-radius:4px 0 0 4px;-webkit-border-radius:4px 0 0 4px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-toolbar.fr-rtl .fr-command.fr-btn.fr-btn-hover,.fr-toolbar.fr-rtl .fr-btn-wrap.fr-btn-hover,.fr-popup.fr-rtl .fr-command.fr-btn.fr-btn-hover,.fr-popup.fr-rtl .fr-btn-wrap.fr-btn-hover,.fr-modal.fr-rtl .fr-command.fr-btn.fr-btn-hover,.fr-modal.fr-rtl .fr-btn-wrap.fr-btn-hover{border-radius:0 4px 4px 0;-moz-border-radius:0 4px 4px 0;-webkit-border-radius:0 4px 4px 0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-toolbar.fr-inline>.fr-command.fr-btn:not(.fr-hidden),.fr-toolbar.fr-inline>.fr-btn-wrap:not(.fr-hidden){display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;float:none}.fr-desktop .fr-command:hover,.fr-desktop .fr-command:focus,.fr-desktop .fr-command.fr-btn-hover,.fr-desktop .fr-command.fr-expanded{outline:0;color:#2C4560}.fr-desktop .fr-command:hover:not(.fr-table-cell),.fr-desktop .fr-command:focus:not(.fr-table-cell),.fr-desktop .fr-command.fr-btn-hover:not(.fr-table-cell),.fr-desktop .fr-command.fr-expanded:not(.fr-table-cell){background:#ebebeb}.fr-desktop .fr-command:hover::after,.fr-desktop .fr-command:focus::after,.fr-desktop .fr-command.fr-btn-hover::after,.fr-desktop .fr-command.fr-expanded::after{border-top-color:#2C4560}.fr-desktop .fr-command.fr-selected:not(.fr-table-cell),.fr-desktop .fr-command:active{color:#2C4560;background:#d6d6d6}.fr-desktop .fr-command.fr-active:hover,.fr-desktop .fr-command.fr-active:focus,.fr-desktop .fr-command.fr-active.fr-btn-hover,.fr-desktop .fr-command.fr-active.fr-expanded{background:#ebebeb}.fr-desktop .fr-command.fr-active:active{background:#d6d6d6}.fr-desktop .fr-command.fr-disabled:hover,.fr-desktop .fr-command.fr-disabled:focus,.fr-desktop .fr-command.fr-disabled.fr-selected{background:transparent}.fr-desktop.fr-disabled .fr-command:hover,.fr-desktop.fr-disabled .fr-command:focus,.fr-desktop.fr-disabled .fr-command.fr-selected{background:transparent}.fr-toolbar.fr-mobile .fr-command.fr-blink,.fr-popup.fr-mobile .fr-command.fr-blink{background:#d6d6d6}.fr-command.fr-btn.fr-options{width:16px;margin-left:-5px}.fr-command.fr-btn.fr-options.fr-btn-hover,.fr-command.fr-btn.fr-options:hover,.fr-command.fr-btn.fr-options:focus{border-left:solid 1px #FAFAFA;-webkit-transition:border-left 0s, background-color 0.5s;-moz-transition:border-left 0s, background-color 0.5s;-ms-transition:border-left 0s, background-color 0.5s;-o-transition:border-left 0s, background-color 0.5s}.fr-command.fr-btn+.fr-dropdown-menu{background:#FFF;display:inline-block;position:absolute;right:auto;bottom:auto;height:auto;z-index:4;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;-webkit-overflow-scrolling:touch;overflow:hidden;zoom:1;-webkit-box-shadow:0 3px 1px -2px rgba(0,0,0,0.2),0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12);-moz-box-shadow:0 3px 1px -2px rgba(0,0,0,0.2),0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12);box-shadow:0 3px 1px -2px rgba(0,0,0,0.2),0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12)}.fr-command.fr-btn+.fr-dropdown-menu.test-height .fr-dropdown-wrapper{-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;height:auto;max-height:275px}.fr-command.fr-btn+.fr-dropdown-menu .fr-dropdown-wrapper{padding:0;margin:auto;display:inline-block;text-align:left;position:relative;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-transition:height 0.3s;-moz-transition:height 0.3s;-ms-transition:height 0.3s;-o-transition:height 0.3s;margin-top:0;float:left;height:0;margin-top:0 !important}.fr-command.fr-btn+.fr-dropdown-menu .fr-dropdown-wrapper .fr-dropdown-content{position:relative}.fr-command.fr-btn+.fr-dropdown-menu .fr-dropdown-wrapper .fr-dropdown-content ul.fr-dropdown-list{list-style-type:none;margin:0;padding:8px 0;min-width:72px}.fr-command.fr-btn+.fr-dropdown-menu .fr-dropdown-wrapper .fr-dropdown-content ul.fr-dropdown-list li{padding:0;margin:0;font-size:15px}.fr-command.fr-btn+.fr-dropdown-menu .fr-dropdown-wrapper .fr-dropdown-content ul.fr-dropdown-list li a{padding:0 20px;line-height:200%;display:flex;cursor:pointer;white-space:nowrap;color:inherit;text-decoration:none;border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-command.fr-btn+.fr-dropdown-menu .fr-dropdown-wrapper .fr-dropdown-content ul.fr-dropdown-list li a svg{width:24px;height:24px;margin:3px 4px}.fr-command.fr-btn+.fr-dropdown-menu .fr-dropdown-wrapper .fr-dropdown-content ul.fr-dropdown-list li a svg path{fill:#2C4560}.fr-command.fr-btn+.fr-dropdown-menu .fr-dropdown-wrapper .fr-dropdown-content ul.fr-dropdown-list li a.fr-active{background:#d6d6d6}.fr-command.fr-btn+.fr-dropdown-menu .fr-dropdown-wrapper .fr-dropdown-content ul.fr-dropdown-list li a.fr-disabled{color:#bdbdbd;cursor:default}.fr-command.fr-btn+.fr-dropdown-menu .fr-dropdown-wrapper .fr-dropdown-content ul.fr-dropdown-list li a .fr-shortcut{margin-left:20px;font-weight:bold;-webkit-opacity:0.75;-moz-opacity:0.75;opacity:0.75}.fr-command.fr-btn.fr-active+.fr-dropdown-menu{display:inline-block;-webkit-box-shadow:0 3px 1px -2px rgba(0,0,0,0.2),0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12);-moz-box-shadow:0 3px 1px -2px rgba(0,0,0,0.2),0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12);box-shadow:0 3px 1px -2px rgba(0,0,0,0.2),0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12)}.fr-bottom>.fr-command.fr-btn+.fr-dropdown-menu{border-radius:2px 2px 0 0;-moz-border-radius:2px 2px 0 0;-webkit-border-radius:2px 2px 0 0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-toolbar.fr-rtl .fr-dropdown-wrapper,.fr-popup.fr-rtl .fr-dropdown-wrapper{text-align:right !important}body.prevent-scroll{overflow:hidden}body.prevent-scroll.fr-mobile{position:fixed;-webkit-overflow-scrolling:touch}.fr-modal{color:#222222;font-family:Arial, Helvetica, sans-serif;position:fixed;overflow-x:auto;overflow-y:scroll;top:0;left:0;bottom:0;right:0;width:100%;z-index:2147483640;text-rendering:optimizelegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:center;line-height:1.2}.fr-modal.fr-middle .fr-modal-wrapper{margin-top:0;margin-bottom:0;margin-left:auto;margin-right:auto;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);-o-transform:translate(-50%, -50%);position:absolute}.fr-modal .fr-modal-wrapper{border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;background-clip:padding-box;margin:20px auto;display:inline-block;background:#FFF;min-width:300px;-webkit-box-shadow:0 3px 5px -1px rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12);-moz-box-shadow:0 3px 5px -1px rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12);box-shadow:0 3px 5px -1px rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12);border:0;overflow:hidden;width:90%;position:relative}@media (min-width: 768px) and (max-width: 991px){.fr-modal .fr-modal-wrapper{margin:30px auto;width:70%}}@media (min-width: 992px){.fr-modal .fr-modal-wrapper{margin:50px auto;width:960px}}.fr-modal .fr-modal-wrapper .fr-modal-head{background:#FFF;overflow:hidden;position:absolute;width:100%;min-height:42px;z-index:3;border-bottom:solid #efefef 1px;-webkit-transition:all 0.2s ease 0s;-moz-transition:all 0.2s ease 0s;-ms-transition:all 0.2s ease 0s;-o-transition:all 0.2s ease 0s}.fr-modal .fr-modal-wrapper .fr-modal-head .fr-modal-head-line{height:56px;padding:0 10px}.fr-modal .fr-modal-wrapper .fr-modal-head .fr-modal-close{margin:10px;position:absolute;top:0;right:0}.fr-modal .fr-modal-wrapper .fr-modal-head h4{font-size:20px;padding:19px 10px;margin:0;font-weight:400;line-height:18px;display:inline-block;float:left}.fr-modal .fr-modal-wrapper div.fr-modal-body{height:100%;min-height:150px;overflow-y:auto;padding-bottom:20px}.fr-modal .fr-modal-wrapper div.fr-modal-body:focus{outline:0}.fr-modal .fr-modal-wrapper div.fr-modal-body button.fr-command{height:36px;line-height:1;color:#0098f7;padding:10px;cursor:pointer;text-decoration:none;border:none;background:none;font-size:16px;outline:none;-webkit-transition:background 0.2s ease 0s;-moz-transition:background 0.2s ease 0s;-ms-transition:background 0.2s ease 0s;-o-transition:background 0.2s ease 0s;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-modal .fr-modal-wrapper div.fr-modal-body button.fr-command+button{margin-left:24px}.fr-modal .fr-modal-wrapper div.fr-modal-body button.fr-command:hover,.fr-modal .fr-modal-wrapper div.fr-modal-body button.fr-command:focus{background:#ebebeb;color:#0098f7}.fr-modal .fr-modal-wrapper div.fr-modal-body button.fr-command:active{background:#d6d6d6;color:#0098f7}.fr-modal .fr-modal-wrapper div.fr-modal-body button::-moz-focus-inner{border:0}.fr-desktop .fr-modal-wrapper .fr-modal-head i:hover{background:#ebebeb}.fr-overlay{position:fixed;top:0;bottom:0;left:0;right:0;background:#000;-webkit-opacity:0.5;-moz-opacity:0.5;opacity:0.5;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";z-index:2147483639}ol.decimal_type{counter-reset:item}ol.decimal_type>li{display:block}ol.decimal_type>li:before{content:counters(item,".") ". ";counter-increment:item}.fr-popup{position:absolute;display:none;color:#222222;background:#FFF;-webkit-box-shadow:0 3px 5px -1px rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12);-moz-box-shadow:0 3px 5px -1px rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12);box-shadow:0 3px 5px -1px rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12);font-family:Arial, Helvetica, sans-serif;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;user-select:none;-o-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;margin-top:10px;z-index:2147483635;text-align:left;border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;text-rendering:optimizelegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;line-height:1.2}.fr-popup .fr-icon{text-align:center;vertical-align:middle;font-size:20px;line-height:1;cursor:pointer;font-weight:400;box-sizing:content-box;padding:6px}.fr-popup .fr-icon-container{padding:20px;max-height:200px;overflow:auto;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}@supports not (-ms-high-contrast: none){.fr-popup .fr-icon-container{grid-template-columns:repeat(auto-fill, minmax(36px, 36px));display:grid}}@media (min-width: 768px){.fr-popup .fr-icon-container{min-width:276px}}@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){.fr-popup .fr-icon-container{display:inline-flex;-ms-flex-flow:row wrap}}@media screen and (-ms-high-contrast: active) and (max-width: 768px), (-ms-high-contrast: none) and (max-width: 768px){.fr-popup .fr-icon-container{width:236px}}.fr-popup .fr-input-focus{background:whitesmoke}.fr-popup.fr-above{margin-top:-10px;border-top:0}.fr-popup.fr-active{display:block}.fr-popup.fr-hidden{-webkit-opacity:0;-moz-opacity:0;opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"}.fr-popup.fr-empty{display:none !important}.fr-popup .fr-hs{display:block !important}.fr-popup .fr-hs.fr-hidden{display:none !important}.fr-popup .fr-input-line{position:relative;padding:15px 0}.fr-popup .fr-input-line input[type="text"],.fr-popup .fr-input-line textarea{width:100%;margin-bottom:1px;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;border:solid 1px #A8BBCF;color:#222222;font-size:14px;background:#FFF;position:relative;z-index:2;padding:4px 12px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-transition:border 0.5s, padding 0.5s;-moz-transition:border 0.5s, padding 0.5s;-ms-transition:border 0.5s, padding 0.5s;-o-transition:border 0.5s, padding 0.5s}.fr-popup .fr-input-line input[type="text"]:hover,.fr-popup .fr-input-line textarea:hover{border:solid 1px #515151}.fr-popup .fr-input-line input[type="text"]:focus,.fr-popup .fr-input-line textarea:focus{border:solid 2px #0098f7;padding:3px 11px}.fr-popup .fr-input-line input[type="text"]{height:46px}.fr-popup .fr-input-line input+label,.fr-popup .fr-input-line textarea+label{position:absolute;top:29px;left:12px;font-size:14px;color:grey;-webkit-transition:all 0.5s ease;-moz-transition:all 0.5s ease;-ms-transition:all 0.5s ease;-o-transition:all 0.5s ease;z-index:3;display:block;background:#FFF;padding:0;cursor:text}.fr-popup .fr-input-line input.fr-not-empty+label,.fr-popup .fr-input-line textarea.fr-not-empty+label{color:gray;width:auto;left:4px;padding:0 4px;font-size:11px;top:9px}.fr-popup input,.fr-popup textarea{user-select:text;-o-user-select:text;-moz-user-select:text;-khtml-user-select:text;-webkit-user-select:text;-ms-user-select:text;border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;outline:none}.fr-popup textarea{resize:none}.fr-popup .fr-buttons{white-space:nowrap;line-height:0}.fr-popup .fr-buttons .fr-btn{margin-left:4px;margin-right:4px;display:inline-block;float:none}.fr-popup .fr-buttons .fr-btn i{float:left}.fr-popup .fr-buttons .fr-separator{display:inline-block;float:none}.fr-popup .fr-buttons.fr-tabs{border-radius:6px 6px 0 0;-moz-border-radius:6px 6px 0 0;-webkit-border-radius:6px 6px 0 0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;background-color:#f5f5f5;overflow:hidden}@media (max-width: 768px){.fr-popup .fr-buttons.fr-tabs.fr-tabs-scroll{overflow:scroll;overflow-y:hidden;width:276px}}.fr-popup .fr-buttons:not(.fr-tabs){padding:5px}.fr-popup .fr-layer{border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;width:195px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:20px;display:none}@media (min-width: 768px){.fr-popup .fr-layer{width:260px}}.fr-popup .fr-layer.fr-active{display:inline-block}.fr-popup .fr-action-buttons{z-index:7;height:36px;text-align:right}.fr-popup .fr-action-buttons button.fr-command{height:36px;line-height:1;color:#0098f7;padding:10px;cursor:pointer;text-decoration:none;border:none;background:none;font-size:16px;outline:none;-webkit-transition:background 0.2s ease 0s;-moz-transition:background 0.2s ease 0s;-ms-transition:background 0.2s ease 0s;-o-transition:background 0.2s ease 0s;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-popup .fr-action-buttons button.fr-command+button{margin-left:24px}.fr-popup .fr-action-buttons button.fr-command:hover,.fr-popup .fr-action-buttons button.fr-command:focus{background:#ebebeb;color:#0098f7}.fr-popup .fr-action-buttons button.fr-command:active{background:#d6d6d6;color:#0098f7}.fr-popup .fr-action-buttons button::-moz-focus-inner{border:0}.fr-popup .fr-checkbox{position:relative;display:inline-block;width:18px;height:18px;padding:10px;border-radius:100%;line-height:1;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;vertical-align:middle}.fr-popup .fr-checkbox svg{margin-left:2px;margin-top:2px;display:none;width:10px;height:10px}.fr-popup .fr-checkbox span{border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;width:18px;height:18px;display:inline-block;position:relative;z-index:1;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-transition:background 0.2s ease 0s, border-color 0.2s ease 0s;-moz-transition:background 0.2s ease 0s, border-color 0.2s ease 0s;-ms-transition:background 0.2s ease 0s, border-color 0.2s ease 0s;-o-transition:background 0.2s ease 0s, border-color 0.2s ease 0s}.fr-popup .fr-checkbox input{position:absolute;z-index:2;-webkit-opacity:0;-moz-opacity:0;opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";border:0 none;cursor:pointer;height:18px;margin:0;padding:0;width:18px;top:7px;left:7px}.fr-popup .fr-checkbox input:not(:checked)+span{border:solid 2px #A8BBCF}.fr-popup .fr-checkbox input:not(:checked):active+span{background-color:#f5f5f5}.fr-popup .fr-checkbox input:not(:checked):focus+span,.fr-popup .fr-checkbox input:not(:checked):hover+span{border-color:#515151}.fr-popup .fr-checkbox input:checked+span{background:#0098f7;border:solid 2px #0098f7}.fr-popup .fr-checkbox input:checked+span svg{display:block}.fr-popup .fr-checkbox input:checked:active+span{background-color:#EcF5Ff}.fr-popup .fr-checkbox input:checked:focus+span,.fr-popup .fr-checkbox input:checked:hover+span{-webkit-opacity:0.8;-moz-opacity:0.8;opacity:0.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"}.fr-popup .fr-checkbox-line{font-size:14px;line-height:1.4px;margin-top:10px}.fr-popup .fr-checkbox-line label{cursor:pointer;margin:0 5px;vertical-align:middle}.fr-popup.fr-rtl{direction:rtl;text-align:right}.fr-popup.fr-rtl .fr-action-buttons{text-align:left}.fr-popup.fr-rtl .fr-input-line input+label,.fr-popup.fr-rtl .fr-input-line textarea+label{left:auto;right:0}.fr-popup.fr-rtl .fr-buttons .fr-separator.fr-vs{float:right}.fr-text-edit-layer{width:250px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;display:block !important}.fr-toolbar{color:#222222;background:#FFF;position:relative;font-family:Arial, Helvetica, sans-serif;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;user-select:none;-o-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;text-align:left;border:1px solid #D4E1F0;text-rendering:optimizelegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;line-height:1.2;padding-bottom:0;-webkit-transition:padding-bottom 0.5s;-moz-transition:padding-bottom 0.5s;-ms-transition:padding-bottom 0.5s;-o-transition:padding-bottom 0.5s}.fr-toolbar::after{clear:both;display:block;content:"";height:0}.fr-toolbar::after{height:0}.fr-toolbar .fr-newline{clear:both;display:block;content:"";margin-left:9px;margin-right:9px;background:#efefef;height:1px;-webkit-transition:height 0.5s;-moz-transition:height 0.5s;-ms-transition:height 0.5s;-o-transition:height 0.5s}.fr-toolbar.fr-toolbar-open{padding-bottom:48px}.fr-toolbar.fr-toolbar-open .fr-newline{height:0}.fr-toolbar .fr-float-right{float:right}.fr-toolbar .fr-float-left{float:left}.fr-toolbar .fr-more-toolbar{float:left;border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;background-color:#f5f5f5;-webkit-transition:height 0.5s;-moz-transition:height 0.5s;-ms-transition:height 0.5s;-o-transition:height 0.5s;height:0;z-index:2;overflow:hidden;position:absolute;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:100%}.fr-toolbar .fr-more-toolbar.fr-expanded{height:48px}.fr-toolbar .fr-more-toolbar.fr-overflow-visible{overflow:visible}.fr-toolbar .fr-more-toolbar>.fr-command.fr-btn{margin-left:4px;margin-right:4px}.fr-toolbar .fr-btn-grp{display:inline-block;margin:0 17px 0 12px}@media (max-width: 768px){.fr-toolbar .fr-btn-grp{margin:0 7px 0 6px}}.fr-toolbar .fr-command.fr-btn.fr-open{margin-top:10px;margin-bottom:-1px;border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-toolbar .fr-command.fr-btn.fr-open:not(:hover):not(:focus):not(:active){background:#f5f5f5}.fr-toolbar.fr-rtl{text-align:right}.fr-toolbar.fr-inline{display:none;-webkit-box-shadow:0 3px 5px -1px rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12);-moz-box-shadow:0 3px 5px -1px rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12);box-shadow:0 3px 5px -1px rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12);border:0;white-space:nowrap;position:absolute;margin-top:5px;z-index:2147483630}.fr-toolbar.fr-inline.fr-above{margin-top:-10px;border-top:0}.fr-toolbar.fr-inline .fr-newline{height:0}.fr-toolbar.fr-top{top:0;border-bottom:0;border-radius:10px 10px 0 0;-moz-border-radius:10px 10px 0 0;-webkit-border-radius:10px 10px 0 0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-toolbar.fr-bottom{bottom:0;border-top:0;padding-bottom:0;border-radius:0 0 10px 10px;-moz-border-radius:0 0 10px 10px;-webkit-border-radius:0 0 10px 10px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-toolbar.fr-bottom .fr-newline{padding-top:0;-webkit-transition:padding-top 0.5s;-moz-transition:padding-top 0.5s;-ms-transition:padding-top 0.5s;-o-transition:padding-top 0.5s}.fr-toolbar.fr-bottom.fr-toolbar-open .fr-newline{padding-top:48px;background:#FFF}.fr-toolbar.fr-bottom .fr-command.fr-btn.fr-open{margin-top:-1px;margin-bottom:10px;border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;-webkit-border-radius:0 0 4px 4px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-toolbar.fr-sticky-on{border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-separator{background:#ebebeb;display:block;vertical-align:top;float:left}.fr-separator+.fr-separator{display:none}.fr-separator.fr-vs{height:32px;width:1px;margin:8px 4px}.fr-separator.fr-hs{clear:both;width:calc(100% - (2 * 4px));margin:0 4px;height:1px}.fr-separator.fr-hidden{display:none !important}.fr-rtl .fr-separator{float:right}.fr-toolbar.fr-inline .fr-separator.fr-hs{float:none}.fr-toolbar.fr-inline .fr-separator.fr-vs{float:none;display:inline-block}.second-toolbar{display:none !important;border:1px solid #D4E1F0;border-top:0;background:#FFF;line-height:1.4;border-radius:0 0 10px 10px;-moz-border-radius:0 0 10px 10px;-webkit-border-radius:0 0 10px 10px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.second-toolbar::after{clear:both;display:block;content:"";height:0}#logo{float:left;outline:none}#logo>span{display:inline-block;float:left;font-family:sans-serif;padding:11px 5px 10px 15px;font-size:12px;font-weight:500;color:#b1b2b7;-webkit-transition:color 0.3s;-moz-transition:color 0.3s;-ms-transition:color 0.3s;-o-transition:color 0.3s}#logo>svg{height:20px;width:47px;margin:7px 0;cursor:pointer}#logo>svg *{-webkit-transition:fill 0.3s;-moz-transition:fill 0.3s;-ms-transition:fill 0.3s;-o-transition:fill 0.3s}#logo:hover>span,#logo:focus>span{color:#0098f7}#logo:hover>svg .fr-logo,#logo:focus>svg .fr-logo{fill:#0098f7}.fr-visibility-helper{display:none;margin-left:0 !important}@media (min-width: 768px){.fr-visibility-helper{margin-left:1px !important}}@media (min-width: 992px){.fr-visibility-helper{margin-left:2px !important}}@media (min-width: 1200px){.fr-visibility-helper{margin-left:3px !important}}.fr-opacity-0{-webkit-opacity:0;-moz-opacity:0;opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"}.fr-box{position:relative}.fr-sticky{position:-webkit-sticky;position:-moz-sticky;position:-ms-sticky;position:-o-sticky;position:sticky}.fr-sticky-off{position:relative}.fr-sticky-on{position:fixed;z-index:10}.fr-sticky-on.fr-sticky-ios{position:absolute;left:0;right:0;width:auto !important}.fr-sticky-dummy{display:none}.fr-sticky-on+.fr-sticky-dummy,.fr-sticky-box>.fr-sticky-dummy{display:block}span.fr-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.clearfix::after{clear:both;display:block;content:"";height:0}.hide-by-clipping{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.fr-box .fr-counter{padding:10px;float:right;color:#A8BBCF;content:attr(data-chars);font-size:14px;font-family:sans-serif;z-index:1;border-radius:2px 0 0 0;-moz-border-radius:2px 0 0 0;-webkit-border-radius:2px 0 0 0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-box.fr-rtl .fr-counter{left:0;right:auto;border-left:none;border-radius:0 2px 0 0;-moz-border-radius:0 2px 0 0;-webkit-border-radius:0 2px 0 0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-box.fr-code-view .fr-counter{display:none}.clearfix::after{clear:both;display:block;content:"";height:0}.hide-by-clipping{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}textarea.fr-code{display:none;width:100%;resize:none;-moz-resize:none;-webkit-resize:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border:none;padding:10px;margin:0;font-family:"Courier New",monospace;font-size:14px;background:#FFF;color:#000;outline:none}.fr-box.fr-rtl textarea.fr-code{direction:rtl}.fr-box .CodeMirror{display:none}.fr-box.fr-code-view textarea.fr-code{display:block}.fr-box.fr-code-view .fr-element,.fr-box.fr-code-view .fr-placeholder,.fr-box.fr-code-view .fr-iframe{display:none}.fr-box.fr-code-view .CodeMirror{display:block}.fr-box.fr-inline.fr-code-view .fr-command.fr-btn.html-switch{display:block}.fr-box.fr-inline .fr-command.fr-btn.html-switch{display:none;position:absolute;top:0;right:0;display:none;background:#FFF;color:#2C4560;-moz-outline:0;outline:0;border:0;line-height:1;cursor:pointer;text-align:left;padding:8px 7px;-webkit-transition:background 0.2s ease 0s;-moz-transition:background 0.2s ease 0s;-ms-transition:background 0.2s ease 0s;-o-transition:background 0.2s ease 0s;border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;z-index:2;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;text-decoration:none;user-select:none;-o-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none}.fr-box.fr-inline .fr-command.fr-btn.html-switch i{font-size:24px;width:24px;text-align:center}.fr-box.fr-inline .fr-command.fr-btn.html-switch.fr-desktop:hover{background:#ebebeb}.clearfix::after{clear:both;display:block;content:"";height:0}.hide-by-clipping{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.fr-popup .fr-layer.fr-color-hex-layer{margin:0;padding:20px;padding-top:0;float:left}.fr-popup .fr-layer.fr-color-hex-layer .fr-input-line{float:left;width:calc(100% - 50px);padding:15px 0 0}.fr-popup .fr-layer.fr-color-hex-layer .fr-action-buttons{float:right;width:38px;height:40px;padding:17px 0 0;margin:0}.fr-popup .fr-layer.fr-color-hex-layer .fr-action-buttons button.fr-command{border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;font-size:13px;height:40px;width:38px}.fr-popup .fr-separator+.fr-colors-tabs{margin-left:2px;margin-right:2px}.fr-popup .fr-color-set{line-height:0;display:none}.fr-popup .fr-color-set.fr-selected-set{display:block;padding:20px;padding-bottom:0}.fr-popup .fr-color-set>span{display:inline-block;width:32px;height:32px;position:relative;z-index:1}.fr-popup .fr-color-set>span>i,.fr-popup .fr-color-set>span>svg{text-align:center;line-height:32px;height:24px;width:24px;margin:4px;font-size:13px;position:absolute;bottom:0;cursor:default;left:0}.fr-popup .fr-color-set>span>i path,.fr-popup .fr-color-set>span>svg path{fill:#222222}.fr-popup .fr-color-set>span .fr-selected-color{color:#FFF;font-family:FontAwesome;font-size:13px;font-weight:400;line-height:32px;position:absolute;top:0;bottom:0;right:0;left:0;text-align:center;cursor:default}.fr-popup .fr-color-set>span:hover,.fr-popup .fr-color-set>span:focus{outline:1px solid #222222;z-index:2}.fr-rtl .fr-popup .fr-colors-tabs .fr-colors-tab.fr-selected-tab[data-param1="text"] ~ [data-param1="background"]::after{-webkit-transform:translate3d(100%, 0, 0);-moz-transform:translate3d(100%, 0, 0);-ms-transform:translate3d(100%, 0, 0);-o-transform:translate3d(100%, 0, 0)}.clearfix::after{clear:both;display:block;content:"";height:0}.hide-by-clipping{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.fr-drag-helper{background:#0098f7;height:2px;margin-top:-1px;-webkit-opacity:0.2;-moz-opacity:0.2;opacity:0.2;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";position:absolute;z-index:2147483640;display:none}.fr-drag-helper.fr-visible{display:block}.fr-dragging{-webkit-opacity:0.4;-moz-opacity:0.4;opacity:0.4;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"}.clearfix::after{clear:both;display:block;content:"";height:0}.hide-by-clipping{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.fr-popup .fr-emoticon{width:24px;height:24px;font-family:"Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Segoe UI Symbol", "Android Emoji", EmojiSymbols}.fr-popup .fr-emoticon img{height:24px;width:24px}.fr-popup .fr-command.fr-btn.fr-tabs-unicode{padding:0 0 0 14px}@media screen and (-ms-high-contrast: active) and (min-width: 768px), (-ms-high-contrast: none) and (min-width: 768px){.fr-popup .fr-icon-container.fr-emoticon-container{width:368px}}.clearfix::after{clear:both;display:block;content:"";height:0}.hide-by-clipping{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.fr-popup .fr-file-upload-layer{border:dashed 2px #bdbdbd;padding:25px 0;margin:20px;position:relative;font-size:14px;letter-spacing:1px;line-height:140%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;text-align:center}.fr-popup .fr-file-upload-layer:hover{background:#ebebeb}.fr-popup .fr-file-upload-layer.fr-drop{background:#ebebeb;border-color:#0098f7}.fr-popup .fr-file-upload-layer .fr-form{-webkit-opacity:0;-moz-opacity:0;opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";position:absolute;top:0;bottom:0;left:0;right:0;z-index:2147483640;overflow:hidden;margin:0 !important;padding:0 !important;width:100% !important}.fr-popup .fr-file-upload-layer .fr-form input{cursor:pointer;position:absolute;right:0;top:0;bottom:0;width:500%;height:100%;margin:0;font-size:400px}.fr-popup .fr-file-progress-bar-layer{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.fr-popup .fr-file-progress-bar-layer>h3{font-size:16px;margin:10px 0;font-weight:normal}.fr-popup .fr-file-progress-bar-layer>div.fr-action-buttons{display:none}.fr-popup .fr-file-progress-bar-layer>div.fr-loader{background:#b3e0fd;height:10px;width:100%;margin-top:20px;overflow:hidden;position:relative}.fr-popup .fr-file-progress-bar-layer>div.fr-loader span{display:block;height:100%;width:0%;background:#0098f7;-webkit-transition:width 0.2s ease 0s;-moz-transition:width 0.2s ease 0s;-ms-transition:width 0.2s ease 0s;-o-transition:width 0.2s ease 0s}.fr-popup .fr-file-progress-bar-layer>div.fr-loader.fr-indeterminate span{width:30% !important;position:absolute;top:0;-webkit-animation:loading 2s linear infinite;-moz-animation:loading 2s linear infinite;-o-animation:loading 2s linear infinite;animation:loading 2s linear infinite}.fr-popup .fr-file-progress-bar-layer.fr-error>div.fr-loader{display:none}.fr-popup .fr-file-progress-bar-layer.fr-error>div.fr-action-buttons{display:block}@keyframes loading{from{left:-25%}to{left:100%}}@-webkit-keyframes loading{from{left:-25%}to{left:100%}}@-moz-keyframes loading{from{left:-25%}to{left:100%}}@-o-keyframes loading{from{left:-25%}to{left:100%}}@keyframes loading{from{left:-25%}to{left:100%}}.clearfix::after{clear:both;display:block;content:"";height:0}.hide-by-clipping{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}body.fr-fullscreen{overflow:hidden;height:100%;width:100%;position:fixed}.fr-box.fr-fullscreen{margin:0 !important;position:fixed;top:0;left:0;bottom:0;right:0;z-index:2147483630 !important;width:auto !important}.fr-box.fr-fullscreen.fr-basic.fr-top .fr-wrapper{border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-box.fr-fullscreen.fr-basic.fr-bottom .fr-wrapper{border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-box.fr-fullscreen .fr-toolbar{border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-box.fr-fullscreen .fr-toolbar.fr-top{top:0 !important}.fr-box.fr-fullscreen .fr-toolbar.fr-bottom{bottom:0 !important}.fr-box.fr-fullscreen .second-toolbar{margin-top:0;border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-fullscreen-wrapper{z-index:2147483640 !important;width:100% !important;margin:0 !important;padding:0 !important;overflow:visible !important}.clearfix::after{clear:both;display:block;content:"";height:0}.hide-by-clipping{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.fr-modal .fr-modal-wrapper .fr-modal-body .fr-help-modal{text-align:left;padding:20px 20px 10px}.fr-modal .fr-modal-wrapper .fr-modal-body .fr-help-modal table{border-collapse:collapse;font-size:14px;line-height:1.5;width:100%}.fr-modal .fr-modal-wrapper .fr-modal-body .fr-help-modal table+table{margin-top:20px}.fr-modal .fr-modal-wrapper .fr-modal-body .fr-help-modal table tr{border:0}.fr-modal .fr-modal-wrapper .fr-modal-body .fr-help-modal table th{text-align:left}.fr-modal .fr-modal-wrapper .fr-modal-body .fr-help-modal table th,.fr-modal .fr-modal-wrapper .fr-modal-body .fr-help-modal table td{padding:6px 0 4px}.fr-modal .fr-modal-wrapper .fr-modal-body .fr-help-modal table tbody tr{border-bottom:solid 1px #ebebeb}.fr-modal .fr-modal-wrapper .fr-modal-body .fr-help-modal table tbody td:first-child{width:60%;color:#646464}.fr-modal .fr-modal-wrapper .fr-modal-body .fr-help-modal table tbody td:nth-child(n+2){letter-spacing:0.5px}.clearfix::after{clear:both;display:block;content:"";height:0}.hide-by-clipping{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.fr-element img{cursor:pointer;padding:0 1px}.fr-image-resizer{position:absolute;border:solid 1px #0098f7;display:none;user-select:none;-o-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}.fr-image-resizer.fr-active{display:block}.fr-image-resizer .fr-handler{display:block;position:absolute;background:#0098f7;border:solid 1px #FFF;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;z-index:4;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.fr-image-resizer .fr-handler.fr-hnw{cursor:nw-resize}.fr-image-resizer .fr-handler.fr-hne{cursor:ne-resize}.fr-image-resizer .fr-handler.fr-hsw{cursor:sw-resize}.fr-image-resizer .fr-handler.fr-hse{cursor:se-resize}.fr-image-resizer .fr-handler{width:12px;height:12px}.fr-image-resizer .fr-handler.fr-hnw{left:-6px;top:-6px}.fr-image-resizer .fr-handler.fr-hne{right:-6px;top:-6px}.fr-image-resizer .fr-handler.fr-hsw{left:-6px;bottom:-6px}.fr-image-resizer .fr-handler.fr-hse{right:-6px;bottom:-6px}@media (min-width: 1200px){.fr-image-resizer .fr-handler{width:10px;height:10px}.fr-image-resizer .fr-handler.fr-hnw{left:-5px;top:-5px}.fr-image-resizer .fr-handler.fr-hne{right:-5px;top:-5px}.fr-image-resizer .fr-handler.fr-hsw{left:-5px;bottom:-5px}.fr-image-resizer .fr-handler.fr-hse{right:-5px;bottom:-5px}}.fr-image-overlay{position:fixed;top:0;left:0;bottom:0;right:0;z-index:2147483640;display:none}.fr-popup .fr-image-upload-layer{border:dashed 2px #bdbdbd;padding:25px 0;margin:20px;position:relative;font-size:14px;letter-spacing:1px;line-height:140%;text-align:center}.fr-popup .fr-image-upload-layer:hover{background:#ebebeb}.fr-popup .fr-image-upload-layer.fr-drop{background:#ebebeb;border-color:#0098f7}.fr-popup .fr-image-upload-layer .fr-form{-webkit-opacity:0;-moz-opacity:0;opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";position:absolute;top:0;bottom:0;left:0;right:0;z-index:2147483640;overflow:hidden;margin:0 !important;padding:0 !important;width:100% !important}.fr-popup .fr-image-upload-layer .fr-form input{cursor:pointer;position:absolute;right:0;top:0;bottom:0;width:500%;height:100%;margin:0;font-size:400px}.fr-popup .fr-image-progress-bar-layer>h3{font-size:16px;margin:10px 0;font-weight:normal}.fr-popup .fr-image-progress-bar-layer>div.fr-action-buttons{display:none}.fr-popup .fr-image-progress-bar-layer>div.fr-loader{background:#b3e0fd;height:10px;width:100%;margin-top:20px;overflow:hidden;position:relative}.fr-popup .fr-image-progress-bar-layer>div.fr-loader span{display:block;height:100%;width:0%;background:#0098f7;-webkit-transition:width 0.2s ease 0s;-moz-transition:width 0.2s ease 0s;-ms-transition:width 0.2s ease 0s;-o-transition:width 0.2s ease 0s}.fr-popup .fr-image-progress-bar-layer>div.fr-loader.fr-indeterminate span{width:30% !important;position:absolute;top:0;-webkit-animation:loading 2s linear infinite;-moz-animation:loading 2s linear infinite;-o-animation:loading 2s linear infinite;animation:loading 2s linear infinite}.fr-popup .fr-image-progress-bar-layer.fr-error>div.fr-loader{display:none}.fr-popup .fr-image-progress-bar-layer.fr-error>div.fr-action-buttons{display:block}.fr-image-size-layer .fr-image-group .fr-input-line{width:calc(50% - 5px);display:inline-block}.fr-image-size-layer .fr-image-group .fr-input-line+.fr-input-line{margin-left:10px}.fr-uploading{-webkit-opacity:0.4;-moz-opacity:0.4;opacity:0.4;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"}@-webkit-keyframes loading{from{left:-25%}to{left:100%}}@-moz-keyframes loading{from{left:-25%}to{left:100%}}@-o-keyframes loading{from{left:-25%}to{left:100%}}@keyframes loading{from{left:-25%}to{left:100%}}.clearfix::after{clear:both;display:block;content:"";height:0}.hide-by-clipping{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.fr-modal .fr-modal-head .fr-modal-head-line::after{clear:both;display:block;content:"";height:0}.fr-modal .fr-modal-head .fr-modal-head-line .fr-modal-more{margin-top:10px}.fr-modal .fr-modal-head .fr-modal-head-line .fr-modal-more.fr-not-available{opacity:0;width:0;padding:12px 0}.fr-modal .fr-modal-head .fr-modal-tags{padding:0 20px;display:none;text-align:left}.fr-modal .fr-modal-head .fr-modal-tags a{display:inline-block;opacity:0;padding:6px 12px;margin:8px 0 8px 8px;text-decoration:none;border-radius:32px;-moz-border-radius:32px;-webkit-border-radius:32px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;-webkit-transition:opacity 0.2s ease 0s, background 0.2s ease 0s;-moz-transition:opacity 0.2s ease 0s, background 0.2s ease 0s;-ms-transition:opacity 0.2s ease 0s, background 0.2s ease 0s;-o-transition:opacity 0.2s ease 0s, background 0.2s ease 0s;cursor:pointer;background-color:#f5f5f5}.fr-modal .fr-modal-head .fr-modal-tags a:focus{outline:none;background-color:#ebebeb}.fr-modal .fr-modal-head .fr-modal-tags a:hover{background-color:#ebebeb}.fr-modal .fr-modal-head .fr-modal-tags a:active{background-color:#d6d6d6}.fr-modal .fr-modal-head .fr-modal-tags a.fr-selected-tag{background-color:#EcF5Ff;color:#0098f7}.fr-modal .fr-modal-head .fr-modal-tags a.fr-selected-tag:focus{outline:none;background-color:#ebebeb}.fr-modal .fr-modal-head .fr-modal-tags a.fr-selected-tag:hover{background-color:#ebebeb}.fr-modal .fr-modal-head .fr-modal-tags a.fr-selected-tag:active{background-color:#d6d6d6}.fr-show-tags .fr-modal-more svg path{fill:#0098f7}div.fr-modal-body{-webkit-transition:background 0.2s ease 0s;-moz-transition:background 0.2s ease 0s;-ms-transition:background 0.2s ease 0s;-o-transition:background 0.2s ease 0s}div.fr-modal-body .fr-preloader{display:block;margin:50px auto}div.fr-modal-body div.fr-image-list{text-align:center;margin:0 20px;padding:0}div.fr-modal-body div.fr-image-list .fr-list-column{float:left;width:calc((100% - 20px) / 2)}@media (min-width: 768px) and (max-width: 1199px){div.fr-modal-body div.fr-image-list .fr-list-column{width:calc((100% - 40px) / 3)}}@media (min-width: 1200px){div.fr-modal-body div.fr-image-list .fr-list-column{width:calc((100% - 60px) / 4)}}div.fr-modal-body div.fr-image-list .fr-list-column+.fr-list-column{margin-left:20px}div.fr-modal-body div.fr-image-list div.fr-image-container{position:relative;width:100%;display:block;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;overflow:hidden}div.fr-modal-body div.fr-image-list div.fr-image-container:first-child{margin-top:20px}div.fr-modal-body div.fr-image-list div.fr-image-container+div{margin-top:20px}div.fr-modal-body div.fr-image-list div.fr-image-container.fr-image-deleting::after{position:absolute;-webkit-opacity:0.5;-moz-opacity:0.5;opacity:0.5;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";-webkit-transition:opacity 0.2s ease 0s;-moz-transition:opacity 0.2s ease 0s;-ms-transition:opacity 0.2s ease 0s;-o-transition:opacity 0.2s ease 0s;background:#000;content:"";top:0;left:0;bottom:0;right:0;z-index:2}div.fr-modal-body div.fr-image-list div.fr-image-container.fr-image-deleting::before{content:attr(data-deleting);color:#FFF;top:0;left:0;bottom:0;right:0;margin:auto;position:absolute;z-index:3;font-size:15px;height:20px}div.fr-modal-body div.fr-image-list div.fr-image-container.fr-empty{height:95px;background:#CCCCCC;z-index:1}div.fr-modal-body div.fr-image-list div.fr-image-container.fr-empty::after{position:absolute;margin:auto;top:0;bottom:0;left:0;right:0;content:attr(data-loading);display:inline-block;height:20px}div.fr-modal-body div.fr-image-list div.fr-image-container img{width:100%;vertical-align:middle;position:relative;z-index:2;-webkit-opacity:1;-moz-opacity:1;opacity:1;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";-webkit-transition:opacity 0.2s ease 0s, filter 0.2s ease 0s;-moz-transition:opacity 0.2s ease 0s, filter 0.2s ease 0s;-ms-transition:opacity 0.2s ease 0s, filter 0.2s ease 0s;-o-transition:opacity 0.2s ease 0s, filter 0.2s ease 0s;-webkit-transform:translateZ(0);-moz-transform:translateZ(0);-ms-transform:translateZ(0);-o-transform:translateZ(0)}div.fr-modal-body div.fr-image-list div.fr-image-container.fr-mobile-selected img{-webkit-opacity:0.75;-moz-opacity:0.75;opacity:0.75;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"}div.fr-modal-body div.fr-image-list div.fr-image-container.fr-mobile-selected .fr-delete-img,div.fr-modal-body div.fr-image-list div.fr-image-container.fr-mobile-selected .fr-insert-img{display:inline-block}div.fr-modal-body div.fr-image-list div.fr-image-container .fr-delete-img,div.fr-modal-body div.fr-image-list div.fr-image-container .fr-insert-img{display:none;top:50%;border-radius:100%;-moz-border-radius:100%;-webkit-border-radius:100%;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;-webkit-transition:background 0.2s ease 0s, color 0.2s ease 0s;-moz-transition:background 0.2s ease 0s, color 0.2s ease 0s;-ms-transition:background 0.2s ease 0s, color 0.2s ease 0s;-o-transition:background 0.2s ease 0s, color 0.2s ease 0s;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:absolute;cursor:pointer;margin:0;line-height:40px;text-decoration:none;z-index:3}div.fr-modal-body div.fr-image-list div.fr-image-container .fr-delete-img{background:#B8312F;fill:#FFF;padding:8px;left:50%;-webkit-transform:translateY(-50%) translateX(25%);-moz-transform:translateY(-50%) translateX(25%);-ms-transform:translateY(-50%) translateX(25%);-o-transform:translateY(-50%) translateX(25%)}div.fr-modal-body div.fr-image-list div.fr-image-container .fr-insert-img{background:#FFF;fill:#0098f7;padding:8px;left:50%;-webkit-transform:translateY(-50%) translateX(-125%);-moz-transform:translateY(-50%) translateX(-125%);-ms-transform:translateY(-50%) translateX(-125%);-o-transform:translateY(-50%) translateX(-125%)}.fr-desktop .fr-modal-wrapper div.fr-modal-body div.fr-image-list div.fr-image-container:hover img{-webkit-opacity:0.75;-moz-opacity:0.75;opacity:0.75;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"}.fr-desktop .fr-modal-wrapper div.fr-modal-body div.fr-image-list div.fr-image-container:hover .fr-delete-img,.fr-desktop .fr-modal-wrapper div.fr-modal-body div.fr-image-list div.fr-image-container:hover .fr-insert-img{display:inline-block;width:40px;height:40px}.fr-desktop .fr-modal-wrapper div.fr-modal-body div.fr-image-list div.fr-image-container .fr-delete-img:hover{background:#bf4644;color:#FFF}.fr-desktop .fr-modal-wrapper div.fr-modal-body div.fr-image-list div.fr-image-container .fr-insert-img:hover{background:#ebebeb}.clearfix::after{clear:both;display:block;content:"";height:0}.hide-by-clipping{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.fr-line-breaker{cursor:text;border-top:1px solid #0098f7;position:fixed;z-index:2;display:none}.fr-line-breaker.fr-visible{display:block}.fr-line-breaker a.fr-floating-btn{position:absolute;left:calc(50% - (40px / 2));top:-20px}.fr-line-breaker a.fr-floating-btn svg{margin:8px;height:24px;width:24px}.clearfix::after{clear:both;display:block;content:"";height:0}.hide-by-clipping{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.fr-quick-insert{position:absolute;z-index:2147483639;white-space:nowrap;padding-right:10px;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}.fr-quick-insert a.fr-floating-btn svg{margin:8px;width:24px;height:24px}.fr-quick-insert.fr-on a.fr-floating-btn svg{-webkit-transform:rotate(135deg);-moz-transform:rotate(135deg);-ms-transform:rotate(135deg);-o-transform:rotate(135deg)}.fr-quick-insert.fr-hidden{display:none}.fr-qi-helper{position:absolute;z-index:3;padding-left:20px;white-space:nowrap}.fr-qi-helper a.fr-btn.fr-floating-btn{text-align:center;padding:6px 10px 10px 10px;display:inline-block;color:#222222;background:#FFF;-webkit-opacity:0;-moz-opacity:0;opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";-webkit-transform:scale(0);-moz-transform:scale(0);-ms-transform:scale(0);-o-transform:scale(0)}.fr-qi-helper a.fr-btn.fr-floating-btn svg{fill:#222222}.fr-qi-helper a.fr-btn.fr-floating-btn.fr-size-1{-webkit-opacity:1;-moz-opacity:1;opacity:1;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1)}.clearfix::after{clear:both;display:block;content:"";height:0}.hide-by-clipping{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.fr-popup .fr-buttons.fr-tabs .fr-special-character-category{padding:10px 15px}.fr-popup .fr-buttons.fr-tabs .fr-special-character-category span{font-weight:normal;font-size:16px}.fr-popup .fr-special-character{width:24px;height:24px}@media screen and (-ms-high-contrast: active) and (min-width: 768px), (-ms-high-contrast: none) and (min-width: 768px){.fr-popup .fr-icon-container.fr-sc-container{width:368px}}.clearfix::after{clear:both;display:block;content:"";height:0}.hide-by-clipping{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.fr-element table td.fr-selected-cell,.fr-element table th.fr-selected-cell{border:1px double #0098f7}.fr-element table tr{user-select:none;-o-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none}.fr-element table td,.fr-element table th{user-select:text;-o-user-select:text;-moz-user-select:text;-khtml-user-select:text;-webkit-user-select:text;-ms-user-select:text}.fr-element .fr-no-selection table td,.fr-element .fr-no-selection table th{user-select:none;-o-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none}.fr-table-resizer{cursor:col-resize;position:absolute;z-index:3;display:none}.fr-table-resizer.fr-moving{z-index:2}.fr-table-resizer div{-webkit-opacity:0;-moz-opacity:0;opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";border-right:1px solid #0098f7}.fr-no-selection{user-select:none;-o-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none}.fr-popup .fr-table-size{margin:20px}.fr-popup .fr-table-size .fr-table-size-info{text-align:center;font-size:14px}.fr-popup .fr-table-size .fr-select-table-size{line-height:0;padding:5px;white-space:nowrap}.fr-popup .fr-table-size .fr-select-table-size>span{display:inline-block;padding:0 4px 4px 0;background:transparent}.fr-popup .fr-table-size .fr-select-table-size>span>span{display:inline-block;width:18px;height:18px;/*border:1px solid #DDD*/}.fr-popup .fr-table-size .fr-select-table-size>span.hover{background:transparent}.fr-popup .fr-table-size .fr-select-table-size>span.hover>span{background:rgba(0,152,247,0.3);border:solid 1px #0098f7}.fr-popup .fr-table-size .fr-select-table-size .new-line::after{clear:both;display:block;content:"";height:0}.fr-popup.fr-above .fr-table-size .fr-select-table-size>span{display:inline-block !important}.fr-popup .fr-table-colors{display:block;padding:20px;padding-bottom:0}.fr-popup.fr-desktop .fr-table-size .fr-select-table-size>span>span{width:12px;height:12px}.fr-insert-helper{position:absolute;z-index:9999;white-space:nowrap}.clearfix::after{clear:both;display:block;content:"";height:0}.hide-by-clipping{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.fr-element .fr-video{user-select:none;-o-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none}.fr-element .fr-video::after{position:absolute;content:'';z-index:1;top:0;left:0;right:0;bottom:0;cursor:pointer;display:block;background:transparent}.fr-element .fr-video.fr-active>*{z-index:2;position:relative}.fr-element .fr-video>*{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;max-width:100%;border:none}.fr-box .fr-video-resizer{position:absolute;border:solid 1px #0098f7;display:none;user-select:none;-o-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none}.fr-box .fr-video-resizer.fr-active{display:block}.fr-box .fr-video-resizer .fr-handler{display:block;position:absolute;background:#0098f7;border:solid 1px #FFF;z-index:4;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.fr-box .fr-video-resizer .fr-handler.fr-hnw{cursor:nw-resize}.fr-box .fr-video-resizer .fr-handler.fr-hne{cursor:ne-resize}.fr-box .fr-video-resizer .fr-handler.fr-hsw{cursor:sw-resize}.fr-box .fr-video-resizer .fr-handler.fr-hse{cursor:se-resize}.fr-box .fr-video-resizer .fr-handler{width:12px;height:12px}.fr-box .fr-video-resizer .fr-handler.fr-hnw{left:-6px;top:-6px}.fr-box .fr-video-resizer .fr-handler.fr-hne{right:-6px;top:-6px}.fr-box .fr-video-resizer .fr-handler.fr-hsw{left:-6px;bottom:-6px}.fr-box .fr-video-resizer .fr-handler.fr-hse{right:-6px;bottom:-6px}@media (min-width: 1200px){.fr-box .fr-video-resizer .fr-handler{width:10px;height:10px}.fr-box .fr-video-resizer .fr-handler.fr-hnw{left:-5px;top:-5px}.fr-box .fr-video-resizer .fr-handler.fr-hne{right:-5px;top:-5px}.fr-box .fr-video-resizer .fr-handler.fr-hsw{left:-5px;bottom:-5px}.fr-box .fr-video-resizer .fr-handler.fr-hse{right:-5px;bottom:-5px}}.fr-popup .fr-video-size-layer .fr-video-group .fr-input-line{width:calc(50% - 5px);display:inline-block}.fr-popup .fr-video-size-layer .fr-video-group .fr-input-line+.fr-input-line{margin-left:10px}.fr-popup .fr-video-upload-layer{border:dashed 2px #bdbdbd;padding:25px 0;margin:20px;position:relative;font-size:14px;letter-spacing:1px;line-height:140%;text-align:center}.fr-popup .fr-video-upload-layer:hover{background:#ebebeb}.fr-popup .fr-video-upload-layer.fr-drop{background:#ebebeb;border-color:#0098f7}.fr-popup .fr-video-upload-layer .fr-form{-webkit-opacity:0;-moz-opacity:0;opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";position:absolute;top:0;bottom:0;left:0;right:0;z-index:2147483640;overflow:hidden;margin:0 !important;padding:0 !important;width:100% !important}.fr-popup .fr-video-upload-layer .fr-form input{cursor:pointer;position:absolute;right:0;top:0;bottom:0;width:500%;height:100%;margin:0;font-size:400px}.fr-popup .fr-video-progress-bar-layer>h3{font-size:16px;margin:10px 0;font-weight:normal}.fr-popup .fr-video-progress-bar-layer>div.fr-action-buttons{display:none}.fr-popup .fr-video-progress-bar-layer>div.fr-loader{background:#b3e0fd;height:10px;width:100%;margin-top:20px;overflow:hidden;position:relative}.fr-popup .fr-video-progress-bar-layer>div.fr-loader span{display:block;height:100%;width:0%;background:#0098f7;-webkit-transition:width 0.2s ease 0s;-moz-transition:width 0.2s ease 0s;-ms-transition:width 0.2s ease 0s;-o-transition:width 0.2s ease 0s}.fr-popup .fr-video-progress-bar-layer>div.fr-loader.fr-indeterminate span{width:30% !important;position:absolute;top:0;-webkit-animation:loading 2s linear infinite;-moz-animation:loading 2s linear infinite;-o-animation:loading 2s linear infinite;animation:loading 2s linear infinite}.fr-popup .fr-video-progress-bar-layer.fr-error>div.fr-loader{display:none}.fr-popup .fr-video-progress-bar-layer.fr-error>div.fr-action-buttons{display:block}.fr-video-overlay{position:fixed;top:0;left:0;bottom:0;right:0;z-index:2147483640;display:none}.clearfix::after{clear:both;display:block;content:"";height:0}.hide-by-clipping{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}img.fr-rounded,.fr-img-caption.fr-rounded img{border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}img.fr-bordered,.fr-img-caption.fr-bordered img{border:solid 5px #CCC}img.fr-bordered{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}.fr-img-caption.fr-bordered img{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.fr-view{word-wrap:break-word}.fr-view span[style~="color:"] a{color:inherit}.fr-view strong{font-weight:700}.fr-view table{border:none;border-collapse:collapse;empty-cells:show;max-width:100%}.fr-view table td{min-width:5px}.fr-view table.fr-dashed-borders td,.fr-view table.fr-dashed-borders th{border-style:dashed}.fr-view table.fr-alternate-rows tbody tr:nth-child(2n){background:whitesmoke}/*.fr-view table td,.fr-view table th{border:1px solid #DDD}*/.fr-view table td:empty,.fr-view table th:empty{height:20px}.fr-view table td.fr-highlighted,.fr-view table th.fr-highlighted{border:1px double red}.fr-view table td.fr-thick,.fr-view table th.fr-thick{border-width:2px}.fr-view table th{background:#ececec}.fr-view hr{clear:both;user-select:none;-o-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;break-after:always;page-break-after:always}.fr-view .fr-file{position:relative}.fr-view .fr-file::after{position:relative;content:"\1F4CE";font-weight:normal}.fr-view pre{white-space:pre-wrap;word-wrap:break-word;overflow:visible}.fr-view[dir="rtl"] blockquote{border-left:none;border-right:solid 2px #5E35B1;margin-right:0;padding-right:5px;padding-left:0}.fr-view[dir="rtl"] blockquote blockquote{border-color:#00BCD4}.fr-view[dir="rtl"] blockquote blockquote blockquote{border-color:#43A047}.fr-view blockquote{border-left:solid 2px #5E35B1;margin-left:0;padding-left:5px;color:#5E35B1}.fr-view blockquote blockquote{border-color:#00BCD4;color:#00BCD4}.fr-view blockquote blockquote blockquote{border-color:#43A047;color:#43A047}.fr-view span.fr-emoticon{font-weight:normal;font-family:"Apple Color Emoji","Segoe UI Emoji","NotoColorEmoji","Segoe UI Symbol","Android Emoji","EmojiSymbols";display:inline;line-height:0}.fr-view span.fr-emoticon.fr-emoticon-img{background-repeat:no-repeat !important;font-size:inherit;height:1em;width:1em;min-height:20px;min-width:20px;display:inline-block;margin:-.1em .1em .1em;line-height:1;vertical-align:middle}.fr-view .fr-text-gray{color:#AAA !important}.fr-view .fr-text-bordered{border-top:solid 1px #222;border-bottom:solid 1px #222;padding:10px 0}.fr-view .fr-text-spaced{letter-spacing:1px}.fr-view .fr-text-uppercase{text-transform:uppercase}.fr-view .fr-class-highlighted{background-color:#ffff00}.fr-view .fr-class-code{border-color:#cccccc;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;background:#f5f5f5;padding:10px;font-family:"Courier New", Courier, monospace}.fr-view .fr-class-transparency{opacity:0.5}.fr-view img{position:relative;max-width:100%}.fr-view img.fr-dib{margin:5px auto;display:block;float:none;vertical-align:top}.fr-view img.fr-dib.fr-fil{margin-left:0;text-align:left}.fr-view img.fr-dib.fr-fir{margin-right:0;text-align:right}.fr-view img.fr-dii{display:inline-block;float:none;vertical-align:bottom;margin-left:5px;margin-right:5px;max-width:calc(100% - (2 * 5px))}.fr-view img.fr-dii.fr-fil{float:left;margin:5px 5px 5px 0;max-width:calc(100% - 5px)}.fr-view img.fr-dii.fr-fir{float:right;margin:5px 0 5px 5px;max-width:calc(100% - 5px)}.fr-view span.fr-img-caption{position:relative;max-width:100%}.fr-view span.fr-img-caption.fr-dib{margin:5px auto;display:block;float:none;vertical-align:top}.fr-view span.fr-img-caption.fr-dib.fr-fil{margin-left:0;text-align:left}.fr-view span.fr-img-caption.fr-dib.fr-fir{margin-right:0;text-align:right}.fr-view span.fr-img-caption.fr-dii{display:inline-block;float:none;vertical-align:bottom;margin-left:5px;margin-right:5px;max-width:calc(100% - (2 * 5px))}.fr-view span.fr-img-caption.fr-dii.fr-fil{float:left;margin:5px 5px 5px 0;max-width:calc(100% - 5px)}.fr-view span.fr-img-caption.fr-dii.fr-fir{float:right;margin:5px 0 5px 5px;max-width:calc(100% - 5px)}.fr-view .fr-video{text-align:center;position:relative}.fr-view .fr-video.fr-rv{padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden}.fr-view .fr-video.fr-rv>iframe,.fr-view .fr-video.fr-rv object,.fr-view .fr-video.fr-rv embed{position:absolute !important;top:0;left:0;width:100%;height:100%}.fr-view .fr-video>*{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;max-width:100%;border:none}.fr-view .fr-video.fr-dvb{display:block;clear:both}.fr-view .fr-video.fr-dvb.fr-fvl{text-align:left}.fr-view .fr-video.fr-dvb.fr-fvr{text-align:right}.fr-view .fr-video.fr-dvi{display:inline-block}.fr-view .fr-video.fr-dvi.fr-fvl{float:left}.fr-view .fr-video.fr-dvi.fr-fvr{float:right}.fr-view a.fr-strong{font-weight:700}.fr-view a.fr-green{color:green}.fr-view .fr-img-caption{text-align:center}.fr-view .fr-img-caption .fr-img-wrap{padding:0;margin:auto;text-align:center;width:100%}.fr-view .fr-img-caption .fr-img-wrap img{display:block;margin:auto;width:100%}.fr-view .fr-img-caption .fr-img-wrap>span{margin:auto;display:block;padding:5px 5px 10px;font-size:14px;font-weight:initial;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-opacity:0.9;-moz-opacity:0.9;opacity:0.9;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";width:100%;text-align:center}.fr-view button.fr-rounded,.fr-view input.fr-rounded,.fr-view textarea.fr-rounded{border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}.fr-view button.fr-large,.fr-view input.fr-large,.fr-view textarea.fr-large{font-size:24px}a.fr-view.fr-strong{font-weight:700}a.fr-view.fr-green{color:green}img.fr-view{position:relative;max-width:100%}img.fr-view.fr-dib{margin:5px auto;display:block;float:none;vertical-align:top}img.fr-view.fr-dib.fr-fil{margin-left:0;text-align:left}img.fr-view.fr-dib.fr-fir{margin-right:0;text-align:right}img.fr-view.fr-dii{display:inline-block;float:none;vertical-align:bottom;margin-left:5px;margin-right:5px;max-width:calc(100% - (2 * 5px))}img.fr-view.fr-dii.fr-fil{float:left;margin:5px 5px 5px 0;max-width:calc(100% - 5px)}img.fr-view.fr-dii.fr-fir{float:right;margin:5px 0 5px 5px;max-width:calc(100% - 5px)}span.fr-img-caption.fr-view{position:relative;max-width:100%}span.fr-img-caption.fr-view.fr-dib{margin:5px auto;display:block;float:none;vertical-align:top}span.fr-img-caption.fr-view.fr-dib.fr-fil{margin-left:0;text-align:left}span.fr-img-caption.fr-view.fr-dib.fr-fir{margin-right:0;text-align:right}span.fr-img-caption.fr-view.fr-dii{display:inline-block;float:none;vertical-align:bottom;margin-left:5px;margin-right:5px;max-width:calc(100% - (2 * 5px))}span.fr-img-caption.fr-view.fr-dii.fr-fil{float:left;margin:5px 5px 5px 0;max-width:calc(100% - 5px)}span.fr-img-caption.fr-view.fr-dii.fr-fir{float:right;margin:5px 0 5px 5px;max-width:calc(100% - 5px)}
+</style><style>/* IronPDF 2021.9.3737 */
+
+body {
+    margin: 0px;
+}
+
+.pdf .title-page {
+/*    font-family: 'Lato', sans-serif;
+*/    font-size: 14px;
+}
+
+.pdf .title {
+    width: 85%;
+    height: 246px;
+    color: white;
+    overflow: hidden;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    display: -webkit-box;
+}
+
+.pdf .title .block-1 {
+    width: 38px;
+    background-color: red;
+}
+
+.pdf .title .block-2 {
+    width: 38px;
+    background-color: green;
+}
+
+.pdf .title .block-3 {
+    width: 800px;
+    background-color: blue;
+    padding-left: 14px;
+}
+
+.pdf .title h1 {
+    text-transform: uppercase;
+    font-size: 44px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 40px;
+}
+
+.pdf .title h2 {
+    font-size: 20px;
+    padding-left: 30px;
+    padding-bottom: 60px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.pdf .logo {
+    height: 80px;
+    padding-left: 110px;
+    padding-top: 130px;
+    padding-bottom: 60px;
+}
+
+.pdf .info {
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 45px;
+}
+
+.pdf .info h1 {
+    font-size: 24px;
+    margin-bottom: -2px;
+    margin-top: 30px;
+}
+
+.pdf #title {
+    color: #fff !important;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 44px;
+    letter-spacing: 2px;
+}
+
+.pdf .coverInfo {
+    margin-top: -12px;
+    padding-bottom: 3px;
+    letter-spacing: 0px;
+    font-weight: 500;
+}
+
+.pdf .coverInfoValue {
+    font-weight: 300;
+    color: rgb(53, 55, 68);
+    margin-top: -12px;
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+}
+
+.pdf h1:after, .pdf h2::after, .pdf h3::after {
+    line-height: 1em;
+}
+
+.pdf p:empty {
+    line-height: 1em;
+}
+
+.pdf p:after, .pdf p:before {
+    line-height: 0em;
+}
+
+.pdf p {
+    line-height: 1em;
+}
+/**end of test*/
+ .pdf .title .block-3 h1, .pdf .title .block-3 h2 {
+    color: #fff;
+ }
+
+/* IronPDF 2021.9.3737 */
+
+.pdf h1 {
+    color: #0889EF;
+    page-break-after: avoid;
+    font-size: 1.75em;
+    line-height: 1.75em;
+    padding-top: 3px;
+}
+
+.pdf h2 {
+    color: #1e98f5;
+    page-break-after: avoid;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+.pdf h3 {
+    color: #39a3f5;
+    page-break-after: avoid;
+    font-size: 1.25em;
+    line-height: 1.25em;
+}
+
+.pdf h4 {
+    color: #585757;
+    page-break-after: avoid;
+    font-size: 1em;
+    line-height: 1em;
+}
+
+.pdf h5 {
+    page-break-after: avoid;
+}
+
+.pdf h6 {
+    page-break-after: avoid;
+}
+
+html {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+
+.pdf .section.old {
+    page-break-inside: avoid;
+}
+
+/* -- Line heights, text margins -- */
+.pdf {
+    line-height: 1.15em;
+}
+
+.pdf li {
+    /* Give a little extra space between list elements */
+    line-height: 1.5em;
+}
+
+.pdf div,
+.pdf p {
+    /* Set divs to use same margins and line spacing as paragraphs. */
+    line-height: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.pdf li > p,
+.pdf li > div {
+    /* Prevent bullet points being placed on seperate lines when copied from Google Docs. */
+    display: inline-block;
+}
+
+.pdf td > p,
+.pdf td > div,
+.pdf th > p,
+.pdf th > div {
+    /* Remove paragraph spacing inside of tables. */
+    margin-top: 0em !important;
+    margin-bottom: 0em !important;
+}
+
+/* Basic table. */
+.pdf table {
+    width: 100%;
+    border-collapse: collapse;
+    page-break-inside: avoid;
+    font-size: 13px;
+}
+
+.pdf table td {
+    padding: 10px;
+    vertical-align: top;
+    text-align: left;
+    color: #2C4560;
+    height: 18px; /* Doesn't include padding because who knows. */
+    border-style: solid;
+    border-color: white;
+    border-width: 3px;
+}
+
+.pdf table thead tr {
+    background-color: #000;
+}
+
+/* CSS counting starts at 1?? What the fuck? */
+
+.pdf table tbody tr:nth-child(odd) {
+    background-color: #F3F4F5;
+}
+
+.pdf table tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+/*.pdf table.pdf-table-body-light {
+    background: rgba(243, 243, 243, .4) !important;
+}*/
+
+.pdf table th {
+    padding: 10px;
+    white-space: nowrap;
+    vertical-align: top;
+    text-align: left;
+    background-color: #F3F3F3;
+    font-weight: bold;
+    border-width: 3px 3px 0px 3px;
+    border-style: solid;
+    border-color: white;
+}
+
+.pdf .Text-Answer {
+    padding: 10px;
+    white-space: nowrap;
+    vertical-align: top;
+    text-align: left;
+    background-color: #F3F3F3;
+    font-weight: bold;
+    border-width: 3px 3px 0px 3px;
+    border-style: solid;
+    border-color: white;
+}
+    /* Advanced table. */
+.pdf table.advanced td {
+    padding: 10px;
+    white-space: nowrap;
+    vertical-align: top;
+    text-align: left;
+    background-color: #F3F3F3;
+    color: #2C4560;
+    border: solid 3px white;
+    height: 18px; /* Doesn't include padding because who knows. */
+}
+
+.pdf table.advanced th {
+    padding: 10px;
+    white-space: nowrap;
+    vertical-align: top;
+    text-align: left;
+    background-color: #0889EF;
+    font-weight: bold;
+    color: white;
+    border: solid 3px white;
+}
+
+.pdf table.advanced td[colspan] {
+    background-color: #FFFFFF;
+    border-bottom: solid 3px #0889EF;
+    font-weight: bold;
+    color: black;
+}
+
+.pdf table.advanced > thead td {
+    background-color: #0889EF;
+    font-weight: bold;
+    color: white;
+}
+
+/* Base for label styling */
+.pdf label{
+    padding-top: 5px;
+}
+
+.pdf [type="checkbox"] {
+    margin-top: 0px;
+}
+
+.pdf [type="checkbox"]:not(:checked), .pdf [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+}
+
+.pdf [type="checkbox"]:not(:checked) + label, .pdf [type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer;
+    display: block;
+    padding-bottom: 1em;
+}
+
+/* checked mark aspect changes */
+.pdf [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.pdf [type="checkbox"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: rotate(45deg) scaleX(-1);
+    -ms-transform: rotate(45deg) scaleX(-1);
+    transform: rotate(45deg) scaleX(-1);
+}
+
+/* disabled checkbox */
+.pdf [type="checkbox"]:disabled:not(:checked) + label:before, .pdf [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+}
+
+.pdf [type="checkbox"]:disabled:checked + label:after {
+    color: #A8BBCF;
+}
+
+.pdf [type="checkbox"]:disabled + label {
+    color: #aaa;
+}
+/* accessibility */
+.pdf [type="checkbox"]:checked:focus + label:before, .pdf [type="checkbox"]:not(:checked):focus + label:before {
+    border: 2px dotted blue;
+}
+/* hover style just for information */
+.pdf label:hover:before {
+    border: 2px solid #4778d9 !important;
+}
+
+.pdf ul {
+    list-style: none;
+    /* Remove default bullets */
+}
+
+.pdf ul li::before {
+    content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #0889EF; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1.2em; /* Also needed for space (tweak if needed) */
+    font-size: 1.3em;
+    margin-left: -1.6em; /* Also needed for space (tweak if needed) */
+}
+
+/*Line and paragraph spacing*/
+.pdf h1:after, .pdf h2:after, .pdf h3:after, .pdf h4::after, .pdf h5::after, .pdf h6::after {
+    line-height: 1em;
+}
+
+.pdf textarea {
+    min-height: 64px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+}
+
+/*table styles*/
+.pdf .pdf-table td, .pdf .pdf-table th {
+    border: 1px #fff solid;
+    padding: 8px;
+}
+
+.pdf .pdf-table th {
+    font-weight: bold;
+}
+
+.pdf .pdf-table-body-empty {
+    background-color: #F3F4F5 !important;
+    color: #878787;
+    font-style: italic;
+}
+
+.pdf .pdf-table-body td {
+    background-color: #F3F4F5;
+}
+
+.pdf .pdf-table-heading3 {
+    background-color: #f3f4f5 !important;
+    color: #343434;
+    text-transform: inherit;
+}
+
+.pdf .pdf-table tr:nth-child(odd) {
+    background-color: #fff
+}
+
+.pdf .pdf-table tr:nth-child(even) {
+    background-color: #F3F4F5;
+}
+
+.pdf .pdf-table tr:last-child td {
+     border-bottom: 2px #F3F4F5 solid;
+}
+
+/* Use inverted background colour when there is no header */
+.pdf .pdf-table-heading-empty tr:nth-child(odd) {
+    background-color: #F3F4F5;
+}
+
+.pdf .pdf-table-heading-empty tr:nth-child(even) {
+    background-color: #fff
+}
+
+.pdf .pdf-th-no-background-color {
+    background-color: #fff !important;
+    padding: 0px !important;
+}
+
+.pdf .text-align-right {
+    text-align: right;
+}
+
+.pdf .text-align-center {
+    text-align: center;
+}
+
+.pdf .word-wrap {
+    white-space: normal;
+    word-wrap: break-word
+}
+
+.pdf .Font-Bold {
+    font-weight: bold;
+}
+
+page {
+    page-break-before: always;
+}
+
+.pdf .Invisible {
+    color: transparent;
+    width: 0px;
+    height: 0px;
+    display: flex;
+    font-size: 1px;
+}
+
+.pdf .Margin-New-Section {
+    margin-top: 30px;
+}
+
+.pdf .Margin-Gap {
+    margin-top: 24px !important;
+}
+
+.pdf .Margin-Gap-S {
+    margin-top: 10px;
+}
+
+.pdf .Page-Break {
+    page-break-before: always;
+}
+
+.pdf .avoid-break-inside {
+    page-break-inside: avoid;
+}
+
+/*insurance stage3 start add*/
+
+.pdf .Text-Small {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2em;
+    margin-left: 4px;
+}
+
+.pdf .Text-Title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 12px !important;
+}
+
+.Text-Subtitle {
+    font-size: 16px;
+    color: #878787 !important;
+    font-weight: bold;
+    margin-top: -8px;
+}
+
+.text-subtitle-sm {
+    margin: 0 0 3px 0;
+    padding: 0;
+}
+
+.pdf .Width70 {
+    width: 70% !important;
+}
+
+/*insurance stage3 end add*/
+
+.pdf .title-box {
+    display: block;
+    padding-top: 5px;
+}
+
+.pdf .title-box.margin-bottom{
+    margin-bottom: 50px !important;
+}
+
+.pdf .title-box .title-text .title-logo img {
+    max-width: 180px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.pdf .border-top {
+    border-top: 1px solid #0889EF;
+    padding-top: 4px;
+}
+
+.pdf .old-value {
+    color: #9F9F9F;
+}
+
+.pdf .pdf-table-heading5 {
+    font-weight: bold;
+    background: white;
+}
+/* IronPDF 2021.9.3737 */
+
+body {
+    margin: 0px;
+}
+
+.pdf .title-page {
+    font-size: 13px;
+}
+
+.pdf .title {
+    width: 85%;
+    height: 246px;
+    color: white;
+    overflow: hidden;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    display: -webkit-box;
+}
+
+.pdf .title .block-1 {
+    width: 38px;
+    background-color: red;
+}
+
+.pdf .title .block-2 {
+    width: 38px;
+    background-color: green;
+}
+
+.pdf .title .block-3 {
+    width: 800px;
+    background-color: blue;
+    padding-left: 14px;
+}
+
+.pdf .title h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.pdf .title h2 {
+    font-size: 16px;
+    padding-left: 20px;
+    padding-bottom: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.pdf .logo {
+    height: 80px;
+    padding-left: 110px;
+    padding-top: 130px;
+    padding-bottom: 60px;
+}
+
+.pdf .info {
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 40px;
+}
+
+.pdf .info h1 {
+    font-size: 24px;
+    margin-bottom: -2px;
+    margin-top: 30px;
+}
+
+.pdf #title {
+    color: #fff !important;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 44px;
+    letter-spacing: 2px;
+}
+
+.pdf .coverInfo {
+    margin-top: -12px;
+    letter-spacing: 0px;
+    margin-bottom: 3px;
+    font-weight: 500;
+    margin: 0 0 10px;
+}
+
+.pdf .coverInfoValue {
+    font-weight: 300;
+    color: rgb(53, 55, 68);
+    margin-top: -12px;
+    margin-bottom: 18px;
+    letter-spacing: 0px;
+    margin: 0 0 8px;
+}
+
+.pdf h1:after, .pdf h2::after, .pdf h3::after {
+    line-height: 1em;
+}
+
+.pdf p:empty {
+    line-height: 0em;
+}
+
+.pdf p:after, .pdf p:before {
+    line-height: 0em;
+}
+
+.pdf p {
+    line-height: 1em;
+}
+
+.pdf .title .block-3 h1, .pdf .title .block-3 h2 {
+    color: #fff;
+}
+
+.pdf .flex-row-even {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: left;
+}
+
+<style scoped>
+/* IronPDF 2021.9.3737 */
+
+.pdf h1 {
+    color: #A6497A;
+    text-transform: uppercase;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.pdf h2 {
+    color: rgba(166, 73, 122, 0.9);;
+    text-transform: inherit;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    padding-top: 3px;
+}
+
+.pdf h3 {
+    color: rgba(166, 73, 122, 0.8);;
+    text-transform: inherit;
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+.pdf h4, .pdf .pdf-h4 {
+    color: rgba(166, 73, 122, 0.7);;
+    text-transform: inherit;
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+.pdf h1, .pdf h2, .pdf h3, .pdf h4, .pdf .pdf-h4 {
+    font-family: "Arial";
+    font-weight: 400;
+}
+
+.pdf body, .pdf {
+    font-family: "Arial";
+    font-weight: 400;
+    color:#2C4560;
+    font-size: 15px;
+}
+
+    /* START Remove in 2022 */
+    .pdf .info h1 {
+        color: #A6497A;
+    }
+    .pdf .title .block-1 {
+        background-color: rgba(166, 73, 122, 0.5);;
+    }
+    .pdf .title .block-2 {
+        background-color: rgba(166, 73, 122, 0.75);;
+    }
+    .pdf .title .block-3 {
+        background-color: #A6497A;
+        letter-spacing: 2px;
+    }
+    .pdf .title h1 {
+        font-size: 38px;
+    }
+    /* END Remove in 2022 */
+
+
+    /* checkbox aspect */
+.pdf [type="checkbox"]:not(:checked) + label:before, .pdf [type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 1.15em;
+    height: 1.15em;
+    border: solid 2px #A6497A;
+    border-radius: 2px;
+}
+
+.pdf [type="checkbox"]:checked + label:after {
+    content: 'L';
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    font-size: 1em;
+    line-height: 0.8;
+    color: #A6497A;
+    transition: all .2s;
+    font-family: 'Arial Unicode MS', Arial;
+}
+
+/**update all below css for previewing the style*/
+.pdf .pdf-heading1 {
+    color: #A6497A;
+    font-family: Arial;
+    font-weight: Regular;
+    text-transform: Uppercase;
+}
+
+.pdf .pdf-heading2 {
+    color: #A6497A;
+    font-family: Arial;
+    font-weight: Regular;
+    text-transform: inherit;
+}
+
+.pdf .pdf-heading3 {
+    color: #A6497A;
+    font-family: Arial;
+    font-weight: Regular;
+    text-transform: inherit;
+}
+
+.pdf .pdf-heading4 {
+    color: #A6497A;
+    font-family: Arial;
+    font-weight: Regular;
+    text-transform: inherit;
+}
+
+.fr-view ul li {
+    padding-top:0px !important;
+}
+
+.pdf ul li::before {
+    list-style: none;
+}
+
+.pdf ul li::before {
+    content: "•";
+    color: #A6497A;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.2em;
+    margin-left: -1.2em;
+    /*padding-bottom: 0.15em;*/
+}
+
+.pdf ol li::marker {
+    color: #A6497A;
+}
+
+.pdf ol li {
+    counter-increment: li;
+}
+
+.pdf .pdf-table-heading1 {
+    background-color: #A6497A !important;
+    color: #ffffff !important;
+    text-transform: inherit;
+}
+
+.pdf .pdf-table-heading2, .pdf .pdf-table-heading3 {
+    border-bottom: 2px solid #A6497A;
+}
+
+.pdf .pdf-table.pdf-table-heading-empty, .pdf .pdf-table-heading4{
+    border-top: 2px solid white;
+    border-bottom: 2px solid #A6497A !important;
+}
+
+.pdf .pdf-table-heading-empty tr:first-of-type {
+    border-top: 2px solid #A6497A;
+}
+
+.pdf .pdf-text {
+    font-family: Arial;
+    font-weight: Regular;
+}
+
+.pdf .pdf-selected-text {
+    color: #A6497A;
+}
+
+/*these style should be here coz it's used in title page*/
+/*
+.Note-Grey {
+    min-height: 64px;
+    border: 2px solid #F3F4F5;
+    padding: 12px;
+    margin-top: 12px;
+}*/
+
+.pdf .Margin-New-Section {
+    margin-top: 40px;
+}
+
+.pdf .Margin-Gap {
+    margin-top: 24px !important;
+}
+
+.pdf .Margin-Gap-S {
+    margin-top: 16px;
+}
+
+.pdf .Margin-None {
+    margin: 0px;
+}
+
+.pdf .Margin-Bottom-None {
+    margin-bottom: 0px !important;
+}
+
+.pdf .Page-Break {
+    page-break-before: always;
+}
+
+.pdf .avoid-break-inside {
+    page-break-inside: avoid;
+}
+
+.pdf .new-value {
+    color: #333333;
+    font-weight: bold;
+}
+
+/*insurance stage3 start add*/
+
+
+/*insurance stage3 end add*/
+
+</style><p><title>Statement of Advice</title></p><div class="pdf fr-view"><meta charset="utf-8"> <link rel="preconnect" href="https://fonts.gstatic.com"> <title>Statement of Advice</title><section id="TitlePage" style="margin-left:-38px;"><div class="pdf"><div class="title-page"><div class="logo"><img src="data:image/png;base64,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" style="max-width: 220px; max-height: 145px; object-fit: contain;" class="fr-fic fr-dii fr-fil"> <!-- Use LogoBase64 property in future. --></div><div class="title"><div class="block-1"><br></div><div class="block-2"><br></div><div class="block-3"><h1>Statement of Advice</h1><h2>Personal Risk</h2></div></div><div class="info"><div><h3>Prepared for</h3><p class="coverInfo">Name: <span class="coverInfoValue">&nbsp;Ron Weasley &amp; Hermione Granger&nbsp;</span></p><h3 class="Margin-New-Section">Produced by</h3><p class="coverInfo">Financial Adviser: <span class="coverInfoValue">Adviser Name</span></p><p class="coverInfo">Registration: <span class="coverInfoValue">368595</span></p><p class="coverInfo">Email: <span class="coverInfoValue">ang.jl_chou@outlook.com</span></p><p class="coverInfo">Phone: <span class="coverInfoValue">0226442087</span></p><h3 class="Margin-New-Section">On behalf of</h3><p class="coverInfo">Business Name: <span class="coverInfoValue">Angel Services Group</span></p><p class="coverInfo">Registration: <span class="coverInfoValue">N/A</span></p><p class="coverInfo">Email:</p><p class="coverInfo">Address: <span class="coverInfoValue">69 Ben Lomond Crescent, Pakuranga Heights, Auckland 1010</span></p><h3 class="Margin-New-Section">Date Prepared</h3><p class="coverInfo"><span class="coverInfoValue">&nbsp;28/07/2021&nbsp;</span></p></div></div></div></div></section><hr name="pagebreak" class="span.fr-deletable froala-page-break"><section contenteditable="false" id="ContentPage" marker=",ContentPage" style="padding:0cm;display:block;background-color:#C4C4C4;margin: -24px -75px !important;-webkit-user-select: none;-ms-user-select: none;user-select: none;"><div style="text-align: center; padding: 20px;"><h1 id="101" name="101" style="padding: 20px; border-style: solid; border-color: white; display: inline-block; color: white">Content Page</h1><div style="color:#c4c4c4;margin-top:-10px; margin-bottom: -10px;">,ContentPage</div></div></section><hr name="pagebreak" class="span.fr-deletable froala-page-break"><div class="section.old"><div><h1 id="102" name="102">Understanding the disablement process</h1><p>Before you read through the recommended advice in this document, it is important you have an understanding of the different types of insurance and in which cases they will provide you with protection. The &#39;Disablement Process&#39; is a concept that helps explain the relevance of each type of insurance.</p><img class="Margin-New-Section fr-fic fr-dii" src="https://trail.gettrail.com/Content/Media/Images/Review/Curve.png" style="width: 100%;"><p class="Margin-New-Section">To cope with each stage of the &#39;Disablement Process&#39; there is a type of insurance which provides financial assistance.</p><p class="Text-Title Margin-Gap">Life Insurance</p><p>Life Insurance will provide your family with a lump sum of money in the unfortunate case of your death in order to protect them against the financial burdens and hardship that might otherwise follow.</p><p class="Text-Title Margin-Gap">Total Permanent Disability</p><p>Total and Permanent Disability (TPD) Cover provides a lump sum payment should you completely lose your ability to ever work again (or carry on your normal tasks, if you are not employed), as a result of illness or injury. TPD Cover is designed to help alleviate the significant financial impact that losing an income forever would likely cause.</p><p class="Text-Title Margin-Gap">Trauma Cover</p><p>Trauma Cover provides a lump-sum payment should you suffer one of the Covered Conditions listed by your provider. These could range from Cancer, Strokes, Heart Attacks, through to Dementia. The Covered Conditions are by nature serious and potentially life-threatening and, as a result, can have a significant financial impact. Trauma Cover is designed to help alleviate this financial impact.</p><p class="Text-Title Margin-Gap">Income Protection</p><p>Income Cover provides a financial safety net should you be disabled as a result of sickness or injury, and unable to earn your regular income. The monthly benefit is designed to replace a significant portion of lost income to help maintain your usual lifestyle during treatment and recovery.</p><p class="Text-Title Margin-Gap">Health Insurance</p><p>Health Insurance provides the funding to enable you to have private medical treatment whenever you require more immediate access or a broader range of treatment options than what is available to you through the public health system.</p></div></div><hr name="pagebreak" class="span.fr-deletable froala-page-break"><div class="section.old"><div><h1 id="103" name="103">Existing Personal Insurance</h1><p>Below is the information you provided regarding your existing insurance. Please ensure the following is an accurate representation of current policy (or policies). If there is anything you think I should know about the policy, make sure it is captured in the notes below the table so I am able to properly assess whether it is the optimal policy for you.</p><!-- Summary of existing insurance goes here --><div class="section.old"><div><h2 class="Margin-New-Section">Policy 6565654 - Asteron</h2><h3>Policy owner: Hermione Granger</h3><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th>Insured person</th><th>Cover type</th><th class="text-align-right">Sum assured</th><th class="text-align-right">Intention</th></tr></thead><tbody><tr><td>Hermione</td><td>accelerated trauma 2012</td><td class="text-align-right">$50,000</td><td class="text-align-right">Replace</td></tr><tr><td>Hermione</td><td>early trauma benefit 2012</td><td class="text-align-right">$25,000</td><td class="text-align-right">Replace</td></tr><tr><td>Hermione</td><td>smartlife cover - 2004</td><td class="text-align-right">$500,000</td><td class="text-align-right">Replace</td></tr><tr><td>Hermione</td><td>we pay your premiums - 2004</td><td class="text-align-right">$50,000</td><td class="text-align-right">Replace</td></tr><tr><td>Hermione</td><td>Income Protection</td><td class="text-align-right">$500,000</td><td class="text-align-right"><br></td></tr><tr><td>Hermione</td><td>Waiver of Premium</td><td class="text-align-right">$0</td><td class="text-align-right"><br></td></tr></tbody></table></div></div><!--ARB section--><h3><br><br>ADVICE ON REPLACEMENT BUSINESS</h3><p class="Text-Title">Why should the client replace this existing policy/contract?</p><p><br></p><p class="Text-Title">Why can&rsquo;t the benefits (which are to be replaced) adequately fulfill the client&rsquo;s objectives?</p><p><br></p><p class="Text-Title">Which risks are not covered by the new policy, which are covered by the old policy?</p><p><br></p></div></div><hr name="pagebreak" class="span.fr-deletable froala-page-break"><div class="section.old"><h1 id="104" name="104">Recommended Cover Summary</h1><p>During our discussions, we talked about your recommended levels of cover. Below is a summary of the cover I originally recommended, as well as any variations you have requested.</p><p><em>Please note that all values are subject to provider approval.</em></p><br><div class="section.old"><div><h2>Hermione Granger</h2><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th>Product</th><th class="text-align-right word-wrap">Recommended Cover</th><th class="text-align-right">Existing Cover</th><th class="text-align-right">Variations</th><th class="text-align-right">Quoted Cover</th><th class="text-align-right word-wrap">Estimated Premium</th></tr></thead><tbody><tr><td>Life</td><td class="text-align-right">$1,402,784</td><td class="text-align-right">$0</td><td class="text-align-right">$0</td><td class="text-align-right">$1,402,784</td><td class="text-align-right">$68.33</td></tr><tr><td>TPD</td><td class="text-align-right">$851,791</td><td class="text-align-right">$0</td><td class="text-align-right">$0</td><td class="text-align-right">$851,791</td><td class="text-align-right">$23.73</td></tr><tr><td>Trauma</td><td class="text-align-right">$485,707</td><td class="text-align-right">$0</td><td class="text-align-right">$0</td><td class="text-align-right">$485,707</td><td class="text-align-right">$86.11</td></tr><tr><td>Income<sub>/year</sub></td><td class="text-align-right">$53,125</td><td class="text-align-right">$6,000,000</td><td class="text-align-right">$0</td><td class="text-align-right">$0</td><td class="text-align-right">$0.00</td></tr><tr><td>Health</td><td class="text-align-right">N/A</td><td class="text-align-right">N/A</td><td class="text-align-right">N/A</td><td class="text-align-right">N/A</td><td class="text-align-right">$106.91</td></tr></tbody></table><p align="right">Estimated Total Monthly Premium: $285.08</p></div><!-- Summary of recommended cover goes here --></div><br><div class="section.old"><div><!-- Summary of recommended cover goes here --><h2>Ron Weasley</h2><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th>Product</th><th class="text-align-right word-wrap">Recommended Cover</th><th class="text-align-right">Existing Cover</th><th class="text-align-right">Variations</th><th class="text-align-right">Quoted Cover</th><th class="text-align-right word-wrap">Estimated Premium</th></tr></thead><tbody><tr><td>Life</td><td class="text-align-right">$6,591,356</td><td class="text-align-right">$0</td><td class="text-align-right">$0</td><td class="text-align-right">$6,591,356</td><td class="text-align-right">$343.03</td></tr><tr><td>TPD</td><td class="text-align-right">$634,269</td><td class="text-align-right">$0</td><td class="text-align-right">$0</td><td class="text-align-right">$634,269</td><td class="text-align-right">$19.07</td></tr><tr><td>Trauma</td><td class="text-align-right">$8,056,177</td><td class="text-align-right">$0</td><td class="text-align-right">$0</td><td class="text-align-right">$8,056,177</td><td class="text-align-right">$1,098.10</td></tr><tr><td>Income<sub>/year</sub></td><td class="text-align-right">$625,000</td><td class="text-align-right">$0</td><td class="text-align-right">$0</td><td class="text-align-right">$625,000</td><td class="text-align-right">$434.51</td></tr><tr><td>Health</td><td class="text-align-right">N/A</td><td class="text-align-right">N/A</td><td class="text-align-right">N/A</td><td class="text-align-right">N/A</td><td class="text-align-right">$70.88</td></tr></tbody></table><p align="right">Estimated Total Monthly Premium: $1965.59</p></div></div></div><hr name="pagebreak" class="span.fr-deletable froala-page-break"><!-- Not strictly necessary --><div class="section.old"><h1 id="105" name="105">Recommended cover breakdown</h1><p>The following is a breakdown of the cover I am recommending, as well as any previously discussed variations, separated into each type of cover.</p></div><div class="section.old"><br><h2>Life Cover</h2><p class="Text-Title">What is Life Insurance?</p><p>In the event of untimely death or terminal illness life insurance will pay a tax-free lump sum. It compensates your family from the loss of income which ceases upon your death. It may also be used for immediate purposes such as covering funeral costs or to bring family together from afar. Other uses include providing a mortgage free home for family and providing funds to legal guardians to raise children.</p><p class="Text-Title Margin-Gap">Why is Life Insurance important to you?</p><p>Often Life Insurance is considered for repayment of household debts such as credit cards, personal lending or mortgages. However, the primary impact that should be considered is the permanent loss of income that results in premature death. Whilst Income Protection can replace income up to age 70 during inability to work due to disability, you are not protected in the event of a death, in which case Life Insurance can replace income that would have been earned.</p><br><h3>Summary</h3><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70">Summary of your life cover recommendation</th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td>Recommended Cover</td><td class="text-align-right">$1,402,784</td><td class="text-align-right">$6,591,356</td></tr><tr><td>Less Retained &amp; Increased Cover</td><td class="text-align-right">$0</td><td class="text-align-right">$0</td></tr><tr><td>Variations</td><td class="text-align-right">$0</td><td class="text-align-right">$0</td></tr><tr><td>Quoted Cover</td><td class="text-align-right">$1,402,784</td><td class="text-align-right">$6,591,356</td></tr><tr><td>Estimated Premium</td><td class="text-align-right">$68.33</td><td class="text-align-right">$343.03</td></tr></tbody></table><br><h3>Policy Additions</h3><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70">Optional extra benefits for your life cover</th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>Amount of Cover to be Stepped</div><div><em>The portion of total cover to be recalculated yearly.</em></div></td><td class="text-align-right word-wrap">$1,052,524</td><td class="text-align-right word-wrap">$6,241,096</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Amount of Cover to be Level</div><div><em>The portion of total cover to be set at a certain level.</em></div></td><td class="text-align-right word-wrap">$0</td><td class="text-align-right word-wrap">$0</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Future Insurability</div><div><em>Increase life cover to certain levels without providing further medical information.</em></div></td><td class="text-align-right word-wrap">Yes</td><td class="text-align-right word-wrap">Yes</td></tr></tbody></table><div class="section.old"><br><h3>Why I have recommended this cover to you</h3><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="word-wrap Width70"><span>FINAL EXPENSES</span> <span class="Text-Small">Tidy up your affairs to reduce the stress of premature death on your surviving family members</span></th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>Funeral Expenses</div><div><br></div></td><td class="text-align-right word-wrap">$15,000</td><td class="text-align-right word-wrap">$15,000</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Estate Settlement</div><div><em>$10,000 for accountancy fees, legal, trustees, &amp; fees.</em></div></td><td class="text-align-right word-wrap">$10,000</td><td class="text-align-right word-wrap">$10,000</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Other Costs</div><div><em>$10,000 for final medical bills, travel costs, etc.</em></div></td><td class="text-align-right word-wrap">$10,000</td><td class="text-align-right word-wrap">$10,000</td></tr></tbody></table><br><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="word-wrap Width70"><span>REPAYING MORTGAGE DEBT</span> <span class="Text-Small">Leave your surviving family members mortgage-free</span></th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>685,000 mortgage at Bluestone</div><div><em>Covering the full amount. Ron Weasley &amp; Hermione Granger are the borrowers.</em></div></td><td class="text-align-right word-wrap">$0</td><td class="text-align-right word-wrap">$0</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>350,260 mortgage at DBR</div><div><em>Covering $350,260. Ron &amp; Hermione are the borrowers.</em></div></td><td class="text-align-right word-wrap">$350,260</td><td class="text-align-right word-wrap">$350,260</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>14,000 mortgage at ANZ</div><div><em>Covering the current outstanding balance of $14,000. Hermione is the borrower.</em></div></td><td class="text-align-right word-wrap">$2,351</td><td class="text-align-right word-wrap">$0</td></tr></tbody></table><br><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70 word-wrap"><span>ONGOING INCOME FOR YOUR FAMILY MEMBERS</span> <span class="Text-Small">Cover the loss to your household income to avoid a change in the lifestyle of your loved ones</span></th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>Ongoing Income</div><div><em>Ron will receive Hermione&#39;s $64,848 net income for 10 years. Hermione will receive Ron&#39;s $677,356 net income for 10 years.</em></div></td><td class="text-align-right word-wrap">$594,153</td><td class="text-align-right word-wrap">$6,206,096</td></tr></tbody></table><br><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70 word-wrap"><span>PRE-FUNDING RETIREMENT PLANS</span> <span class="Text-Small">Left with only a single income, ensure your surviving family are still able to reach their retirement goals</span></th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>Pre-Funding Retirement Plan</div><div><em>A lump sum paid at claim time which will provide Your partner with of Hermione&#39;s current $64,848 net income in retirement and Hermione with of your partner&#39;s current net income in retirement. Based off a savings interest rate of 2%.</em></div></td><td class="text-align-right word-wrap">$421,021</td><td class="text-align-right word-wrap">$0</td></tr></tbody></table><br><!--Other consideration--><h3 class="Margin-New-Section">Cover Detail</h3></div><hr style="page-break-before: always;" name="pagebreak" class="span.fr-deletable" contenteditable="false"><div class="section.old"><br><h2>TPD Cover</h2><p class="Text-Title">What is TPD Cover?</p><p>In the event of suffering a total and permanent disability, such as becoming paralyzed or suffering from Dementia, TPD insurance will pay a tax-free lump sum. If you were to suffer a severe accident, illness or injury, it&rsquo;s possible that you would be prevented from ever returning to work, putting your current financial situation at risk. On top of being unable to work, a total and permanent disability often requires a significant change in lifestyle, including modifications to the home or even full-time care, all of which can be challenging to afford comfortably without TPD insurance.</p><p class="Text-Title Margin-Gap">Why is TPD Cover important to you?</p><p>Losing your ability to earn income for yourself and your family would be devastating. TPD Insurance provides you with a one-off lump sum payment. This allows you to reduce your existing debt or pay for the things you may need to maintain your quality of life, such as modifications to your home or full-time care.</p><br><h3>Summary</h3><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70">Summary of your TPD cover recommendation</th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td>Recommended Cover</td><td class="text-align-right">$851,791</td><td class="text-align-right">$634,269</td></tr><tr><td>Less Retained &amp; Increased Cover</td><td class="text-align-right">$0</td><td class="text-align-right">$0</td></tr><tr><td>Variations</td><td class="text-align-right">$0</td><td class="text-align-right">$0</td></tr><tr><td>Quoted Cover</td><td class="text-align-right">$851,791</td><td class="text-align-right">$634,269</td></tr><tr><td>Estimated Premium</td><td class="text-align-right">$23.73</td><td class="text-align-right">$19.07</td></tr></tbody></table><br><h3>Policy Additions</h3><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70">Optional extra benefits for your TPD cover</th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>Amount of Cover to be Stepped</div><div><em>The portion of total cover to be recalculated yearly.</em></div></td><td class="text-align-right word-wrap">$501,531</td><td class="text-align-right word-wrap">$599,999</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Amount of Cover to be Level</div><div><em>The portion of total cover to be set at a certain level.</em></div></td><td class="text-align-right word-wrap">$0</td><td class="text-align-right word-wrap">$34,269</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Future Insurability</div><div><em>Increase TPD cover to certain levels without providing further medical information.</em></div></td><td class="text-align-right word-wrap">Yes</td><td class="text-align-right word-wrap">Yes</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>TPD Acceleration</div><div><em>Accelerated cover will reduce the life cover after a TPD claim.</em></div></td><td class="text-align-right word-wrap">Accelerated</td><td class="text-align-right word-wrap">Accelerated</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Occupation Load</div><div><em>What types of occupations will you need to be disabled from, in order to claim this cover.</em></div></td><td class="text-align-right word-wrap">Own Occupation</td><td class="text-align-right word-wrap">Own Occupation</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Life Buy Back</div><div><em>Restore the value of your life insurance policy after a TPD insurance claim.</em></div></td><td class="text-align-right word-wrap">Yes</td><td class="text-align-right word-wrap">Yes</td></tr></tbody></table></div><div class="section.old"><br></div><hr style="page-break-before: always;" name="pagebreak" class="span.fr-deletable" contenteditable="false"><div class="section.old"><div class="section.old"><br><h3>Why I have recommended this cover to you</h3><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70 word-wrap"><span>REPAYING OTHER DEBT</span> <span class="Text-Small">Reduce the burden your mortgage presents for you and your family when you are rendered unable to work</span></th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>685,000 mortgage at Bluestone</div><div><em>Covering the full amount. Ron Weasley &amp; Hermione Granger are the borrowers.</em></div></td><td class="text-align-right word-wrap">$0</td><td class="text-align-right word-wrap">$0</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>350,260 mortgage at DBR</div><div><em>Covering $350,260. Ron &amp; Hermione are the borrowers.</em></div></td><td class="text-align-right word-wrap">$350,260</td><td class="text-align-right word-wrap">$350,260</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>14,000 mortgage at ANZ</div><div><em>Covering the current outstanding balance of $14,000. Hermione is the borrower.</em></div></td><td class="text-align-right word-wrap">$2,351</td><td class="text-align-right word-wrap">$0</td></tr></tbody></table><br><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70 word-wrap"><span>TOP UP INCOME COVER</span> <span class="Text-Small">Ensuring your income is fully covered when you need it.</span></th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>Replace remaining portion of income not covered by income protection</div><div><em>A lump sum paid at claim time, providing Hermione with the 37.5% of their income that is not paid out with income protection. Providing Ron with the 37.5% of their income that is not paid out with income protection.</em></div></td><td class="text-align-right word-wrap">$48,159</td><td class="text-align-right word-wrap">$254,009</td></tr></tbody></table><br><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70 word-wrap"><span>EMERGENCY FUND</span></th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>Covering you in the case of an emergency</div><div><em>$10,000 per person.</em></div></td><td class="text-align-right word-wrap">$10,000</td><td class="text-align-right word-wrap">$10,000</td></tr></tbody></table><br><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70 word-wrap"><span>TREATMENT COST</span> <span class="Text-Small">Cover the costs associated with treatment and required lifestyle changes</span></th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>Changes to The Home</div><div><br></div></td><td class="text-align-right word-wrap">$10,000</td><td class="text-align-right word-wrap">$10,000</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Travel for Overseas Treatment</div><div><br></div></td><td class="text-align-right word-wrap">$10,000</td><td class="text-align-right word-wrap">$10,000</td></tr></tbody></table><br><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70 word-wrap"><span>PRE-FUNDING RETIREMENT PLANS</span> <span class="Text-Small">Left with only a single income, ensure your family are still able to reach their retirement goals</span></th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>Pre-Funding Retirement Plan</div><div><em>A lump sum paid at claim time which will provide Hermione with of her current $64,848 net income in retirement and Ron with of his current $677,356 net income in retirement. Based off a savings interest rate of 2%.</em></div></td><td class="text-align-right word-wrap">$421,021</td><td class="text-align-right word-wrap">$0</td></tr></tbody></table><!--Other consideration--></div></div></div><hr name="pagebreak" class="span.fr-deletable froala-page-break"><div class="section.old"><br><h2>Trauma Cover</h2><p class="Text-Title">What is Trauma Cover?</p><p>In the event of suffering a major illness or injury, Trauma Insurance will pay a tax-free lump sum. Serious illnesses like cancer, heart attack or stroke can cause not only loss of mobility and health but also financial loss. Unlike most other policies, these policies are not compensating you for a financial loss they may pay you a lump-sum when there is no financial loss.</p><p class="Text-Title Margin-Gap">Why is Trauma Cover important to you?</p><p>Income protection can help replace loss of income for you if affected by a health crisis but funds from a Trauma Protection claim will allow a loved one to take unpaid time off work to care for you. Other uses for Trauma cover can include clearing of debt to reduce stress or access to private healthcare where health insurance is not in place.</p><p><br></p><p>dfksjldfjdksfjsldfjlsdfsdf</p><br><h3>Summary</h3><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70">Summary of your trauma cover recommendation</th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td>Recommended Cover</td><td class="text-align-right">$485,707</td><td class="text-align-right">$8,056,177</td></tr><tr><td>Less Retained &amp; Increased Cover</td><td class="text-align-right">$0</td><td class="text-align-right">$0</td></tr><tr><td>Variations</td><td class="text-align-right">$0</td><td class="text-align-right">$0</td></tr><tr><td>Quoted Cover</td><td class="text-align-right">$485,707</td><td class="text-align-right">$8,056,177</td></tr><tr><td>Estimated Premium</td><td class="text-align-right">$86.11</td><td class="text-align-right">$1,098.10</td></tr></tbody></table><br><h3>Policy Additions</h3><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70">Optional extra benefits for your trauma cover</th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>Amount of Cover to be Stepped</div><div><em>The portion of total cover to be recalculated yearly.</em></div></td><td class="text-align-right word-wrap">$257,821</td><td class="text-align-right word-wrap">$7,828,291</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Amount of Cover to be Level</div><div><em>The portion of total cover to be set at a certain level.</em></div></td><td class="text-align-right word-wrap">$0</td><td class="text-align-right word-wrap">$0</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Amount of Cover to be Severe Trauma</div><div><em>The portion of total cover to use the severe trauma benefit.</em></div></td><td class="text-align-right word-wrap">$0</td><td class="text-align-right word-wrap">$0</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Future Insurability</div><div><em>Increase trauma cover to certain levels without providing further medical information.</em></div></td><td class="text-align-right word-wrap">Yes</td><td class="text-align-right word-wrap">Yes</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Trauma Acceleration</div><div><em>Accelerated cover will reduce the life cover after a trauma claim.</em></div></td><td class="text-align-right word-wrap">Accelerated</td><td class="text-align-right word-wrap">Accelerated</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Occupation Load</div><div><em>What types of occupations will you need to be disabled from, in order to claim this cover.</em></div></td><td class="text-align-right word-wrap">Own Occupation</td><td class="text-align-right word-wrap">Own Occupation</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Life Buy Back</div><div><em>Restore the value of your life insurance policy after a trauma insurance claim.</em></div></td><td class="text-align-right word-wrap">Yes</td><td class="text-align-right word-wrap">Yes</td></tr></tbody></table><div class="section.old"><br><h3>Why I have recommended this cover to you</h3><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70 word-wrap"><span>COVER REPAYMENTS OF OTHER DEBT</span> <span class="Text-Small">Reduce the burden your mortgage presents for you and your family</span></th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>685,000 mortgage at Bluestone</div><div><em>Covering the full amount. Ron Weasley &amp; Hermione Granger are the borrowers.</em></div></td><td class="text-align-right word-wrap">$0</td><td class="text-align-right word-wrap">$0</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>350,260 mortgage at DBR</div><div><em>A lump sum paid at claim time, providing Hermione with of their monthly $3,950 mortgage repayments. Providing Ron with of their monthly $3,950 mortgage repayments.</em></div></td><td class="text-align-right word-wrap">$227,886</td><td class="text-align-right word-wrap">$227,886</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>14,000 mortgage at ANZ</div><div><em>A lump sum paid at claim time, providing Hermione with of their weekly $10 mortgage repayments. Providing Ron with of their weekly $10 mortgage repayments.</em></div></td><td class="text-align-right word-wrap">$2,481</td><td class="text-align-right word-wrap">$0</td></tr></tbody></table><br><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70 word-wrap"><span>TOP UP INCOME COVER</span> <span class="Text-Small">Ensuring your income is fully covered when you need it</span></th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>Replace remaining portion of income not covered by income protection</div><div><em>A lump sum paid at claim time, providing Hermione with the 37.5% of their income that is not paid out with income protection. Providing Ron with the 37.5% of their income that is not paid out with income protection.</em></div></td><td class="text-align-right word-wrap">$116,914</td><td class="text-align-right word-wrap">$6,476,859</td></tr></tbody></table></div><div class="section.old"><br></div><div class="section.old"><br></div><div class="section.old"><br></div><hr style="page-break-before: always;" name="pagebreak" class="span.fr-deletable" contenteditable="false"><div class="section.old"><br><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70 word-wrap"><span>EMERGENCY FUND</span> <span class="Text-Small">Help aid in any treatment costs or unforeseen circumstances</span></th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>Covering you in the case of an emergency</div><div><em>$10,000 per person.</em></div></td><td class="text-align-right word-wrap">$10,000</td><td class="text-align-right word-wrap">$10,000</td></tr></tbody></table><br><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70 word-wrap"><span>TIME TO RECOVER</span> <span class="Text-Small">Funds to replace your income to ensure you and your partner can both take time off to recover at your own pace</span></th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>Time to Recover</div><div><em>Hermione will receive their $64,848 net income for 2 years while they are off work. Ron will receive their $677,356 net income for 2 years while they are off work.</em></div></td><td class="text-align-right word-wrap">$128,424</td><td class="text-align-right word-wrap">$1,341,431</td></tr></tbody></table></div><div class="section.old"><br></div><div class="section.old"><!--Other consideration--><br></div><p>sdfsdkfhlskdfhsdkfjls</p><p><br></p><p>dkhflsdkhf</p><p>ksdfhlsdjhfl</p><p>kfhlskhdfl</p><p>jdhfksj</p><hr style="page-break-before: always;" name="pagebreak" class="span.fr-deletable" contenteditable="false"></div><hr name="pagebreak" class="span.fr-deletable froala-page-break"><div class="section.old"><br><h2>Income Protection</h2><p class="Text-Title">What is Income Protection?</p><p>Income Protection is designed to compensate you for the loss of income if you are unable to work for more than 10 hours a week due to either an accident, illness or injury. You&#39;ll receive payments monthly after a wait period has passed, and will be paid out for a length of time depending on your policy.</p><p class="Text-Title Margin-Gap">Why is Income Protection important to you?</p><p>Your ability to earn an income can be considered the most valuable asset you have. The sum of the income you will earn from now until retirement is likely to be worth far more than any asset you currently own. The most likely cause of being off work is due to illness, not injury. Because of this, ACC is not sufficient protection.</p><br><h3>Summary</h3><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70">Summary of your income cover recommendation</th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td>Recommended Cover</td><td class="text-align-right">$53,125</td><td class="text-align-right">$625,000</td></tr><tr><td>Less Retained &amp; Increased Cover</td><td class="text-align-right">$6,000,000</td><td class="text-align-right">$0</td></tr><tr><td>Variations</td><td class="text-align-right">$0</td><td class="text-align-right">$0</td></tr><tr><td>Quoted Cover</td><td class="text-align-right">$0</td><td class="text-align-right">$625,000</td></tr><tr><td>Estimated Premium</td><td class="text-align-right">$0.00</td><td class="text-align-right">$434.51</td></tr></tbody></table><div class="section.old"><br><h3>Why I have recommended this cover to you</h3><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="word-wrap Width70"><div>STRUCTURE OF INCOME PROTECTION RECOMMENDATION</div><div class="Text-Small">The structure of your cover determines how much you are covered for, when you get paid and how long that cover lasts for</div></th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>Future Income</div><div><em>Your expected future income based on you working until 65, with a 3% increase in income each year.</em></div></td><td class="text-align-right word-wrap">$3,639,879</td><td class="text-align-right word-wrap">$41,982,331</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Cover Type</div><div><em>Will the cover amount be decided upon now, or at claim time.</em></div></td><td class="text-align-right word-wrap">Agreed Value</td><td class="text-align-right word-wrap">Agreed Value</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Wait Period</div><div><em>How many weeks can you wait for the benefit to start without your income providing for you.</em></div></td><td class="text-align-right word-wrap">13 Weeks</td><td class="text-align-right word-wrap">26 Weeks</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Payout Period</div><div><em>How long you would like the benefit to last.</em></div></td><td class="text-align-right word-wrap">To Age 65</td><td class="text-align-right word-wrap">5 Years</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Stepped or Level</div><div><em>Keep your premiums level until you reach a certain age, or have them adjusted each year.</em></div></td><td class="text-align-right word-wrap">Stepped</td><td class="text-align-right word-wrap">Stepped</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Income Protection</div><div><em>How much of your potential cover will be allocated as income protection (Annual payment).</em></div></td><td class="text-align-right word-wrap">$53,125</td><td class="text-align-right word-wrap">$625,000</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Mortgage Repayment Protection</div><div><em>How much of your potential cover will be allocated as mortgage repayment protection.</em></div></td><td class="text-align-right word-wrap">$0</td><td class="text-align-right word-wrap">$0</td></tr></tbody></table></div></div><hr name="pagebreak" class="span.fr-deletable froala-page-break"><div class="section.old"><br><h2>Health Cover</h2><p class="Text-Title">What is Health Cover?</p><p>In the event of requiring specialist advice, medical or surgical treatment, Health Insurance allows for access to private healthcare. Whilst the public health system is sometimes able to provide swift treatment for acute conditions, private health insurance allows for prompt treatment and swifter recovery. Health insurance may cover non-pharmac drugs, GP visits, natural healthcare (e.g. Physiotherapy) as well as dental and optical cover at an additional cost.</p><p class="Text-Title Margin-Gap">Why is Health Cover important to you?</p><p>Health Insurance allows for immediate access to private healthcare options with far shorter waitlists. Where surgery or specialist treatment is required urgently your best protection is to use medical insurance. This allows you to bypass public health system waiting lists and instead access prompt treatment and experience a faster recovery.</p><br><h3>Summary</h3><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="Width70">Summary of your health insurance recommendation</th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td>Recommended Cover</td><td class="text-align-right">N/A</td><td class="text-align-right">N/A</td></tr><tr><td>Less Retained &amp; Increased Cover</td><td class="text-align-right">N/A</td><td class="text-align-right">N/A</td></tr><tr><td>Variations</td><td class="text-align-right">N/A</td><td class="text-align-right">N/A</td></tr><tr><td>Quoted Cover</td><td class="text-align-right">N/A</td><td class="text-align-right">N/A</td></tr><tr><td>Estimated Premium</td><td class="text-align-right">$106.91</td><td class="text-align-right">$70.88</td></tr></tbody></table><div class="section.old"><br><h3>Why I have recommended this cover to you</h3><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="word-wrap Width70"><span>POLICY BENEFITS</span> <span class="Text-Small">Determines which additional situations you are covered in</span></th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>Non-Pharmac Drugs</div><div><em>Cover for drugs not funded by Pharmac.</em></div></td><td class="text-align-right word-wrap">Yes</td><td class="text-align-right word-wrap">Yes</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Optical &amp; Dental</div><div><em>Cover for some optical and dental work.</em></div></td><td class="text-align-right word-wrap">Yes</td><td class="text-align-right word-wrap">Yes</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>GP Visits &amp; Prescriptions</div><div><em>Have your GP visits and prescriptions covered.</em></div></td><td class="text-align-right word-wrap">Yes</td><td class="text-align-right word-wrap">Yes</td></tr></tbody></table><br><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="word-wrap Width70"><span>STRUCTURE OF HEALTH INSURANCE RECOMMENDATION</span> <span class="Text-Small">Your recommended Health Insurance provider and excess amounts</span></th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>Policy Provider</div><div><em>The insurance company your policy will be with.</em></div></td><td class="text-align-right word-wrap">N/A</td><td class="text-align-right word-wrap">N/A</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Excess on Base Plan</div><div><br></div></td><td class="text-align-right word-wrap">$1000</td><td class="text-align-right word-wrap">$1000</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Specialist &amp; Tests Excess</div><div><em>The excess for your specialist and test claims.</em></div></td><td class="text-align-right word-wrap">$1000</td><td class="text-align-right word-wrap">$1000</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Stepped or Level</div><div><em>Keep your premiums level until you reach a certain age, or have them adjusted each year.</em></div></td><td class="text-align-right word-wrap">Stepped</td><td class="text-align-right word-wrap">Stepped</td></tr></tbody></table><br><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th class="word-wrap Width70"><span>STRUCTURE OF HEALTH INSURANCE RECOMMENDATION</span> <span class="Text-Small">Your recommended Health Insurance provider and excess amounts</span></th><th class="text-align-right">Hermione Granger</th><th class="text-align-right">Ron Weasley</th></tr></thead><tbody><tr><td style="white-space: normal;word-wrap: break-word;"><div>Excess</div><div><br></div></td><td class="text-align-right word-wrap">$1000 Excess</td><td class="text-align-right word-wrap">$1000 Excess</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Specialists &amp; Tests Excess</div><div><br></div></td><td class="text-align-right word-wrap">Includes Specialists &amp; Test ($1000 Excess)</td><td class="text-align-right word-wrap">Includes Specialists &amp; Test ($1000 Excess)</td></tr><tr><td style="white-space: normal;word-wrap: break-word;"><div>Estimated Monthly Premium</div><div><br></div></td><td class="text-align-right word-wrap">$107</td><td class="text-align-right word-wrap">$71</td></tr></tbody></table><!--Other consideration--></div></div><hr name="pagebreak" class="span.fr-deletable froala-page-break"><div class="section.old"><h1 id="106" name="106">Provider Recommendation</h1><br><h2>Accuro</h2><label>Documents for Accuro can be found in the appendix</label></div><hr name="pagebreak" class="span.fr-deletable froala-page-break"><div class="section.old"><h1 id="107" name="107">Important Disclosures</h1><h2>Commissions and Incentives</h2><p>I will receive $<strong>x</strong> from [Insurance Provider] if you decide to apply for this policy and it is accepted by the insurance provider. If there are any variations on the offer from [Insurance Provider] and you accept the terms, I will receive <strong>x</strong>% of your total annual premium. I will also receive <strong>x</strong>% of each year&rsquo;s premiums for as long as the policy remains in force.&nbsp;</p><p>The commission I receive is shared with Angelic Advice Services for providing me with compliance support, training, and back-office support.</p><br><h2>Conflicts of Interest</h2><p><strong>[Product provider]</strong> may subsidise training, technology solutions and compliance costs for Angelic Advice Services.</p><p>I am paid commissions by [Product provider] when a policy goes into force and at the annual renewal of a policy.</p><p>I ensure that I prioritise your interests by following an advice process that considers your circumstances and goals. A thorough comparison of suitable products and services available to meet your needs is completed during this process to support our recommendations.</p><p>I also undergo annual training on how to manage any conflicts of interest.</p><p>[Describe any other conflicts of interest specific to you (as an adviser), and how they are managed]</p><p>[Describe any other conflicts of interest specific to your organisation, and how they are managed]</p><p>Angelic Advice Services is subject to a yearly audit and compliance reviews to ensure we meet our obligations while doing right by our clients.</p><br><h2>Fees and Expenses</h2><p><strong>[Insurance Provider]</strong> will pay us a commission if you decide to take up our advice and your policy is accepted. I may charge you for the financial advice that I provide if you cancel your health or life insurance policy within the first two years of its inception. We will use the following formula to calculate the fee:&nbsp;</p><p>The lower of</p><p><strong>Cancelation fee = {Annual Premium} * [1 - (number of months since the policies inception / 24)]</strong></p><p>Or</p><p>Cancelation fee = $<strong>x</strong> for an estimate of <strong>X</strong> hours of work calculated at $<strong>x</strong> per hour.</p><p>We will invoice you for this fee and it will be payable on the <strong>X</strong>th of the month following the cancellation of your policies. Details of how to make payment will be included on the invoice.</p><p>If you decide not to act on my advice, then I may charge you&nbsp;$<strong>x</strong> for the <strong>X</strong> hours worked to prepare this advice. This was calculated at the rate of $<strong>x</strong> per hour.</p><br><h2>How to make a complaint and resolve a dispute</h2><p>If you are not satisfied with my service you can make a complaint through the following methods:</p><ul><li>By logging into the Trail client portal and pressing on the &ldquo;Make a Complaint&rdquo; button on the bottom right of the page</li><li>By contacting me directly</li><li>By sending an email to <strong>[Name of complaint handler]</strong> on <strong>[Complaint handler email]</strong></li></ul><p>Once we receive a complaint, we follow an internal procedure to ensure we address the issue. Our process will:</p><ul><li>Inform you how we will address the complaint</li><li>Gather any information that will help us resolve the complaint</li><li>Aim to resolve the complaint within <strong>[# of days to resolve the complaint]</strong> working days</li><li>If we cannot resolve the complaint within this timeframe, we will update you regarding next steps</li></ul><p>If you are not satisfied with how we addressed or resolved your complaint, you can contact the <strong>[Name of DRS]</strong>. They are an independent dispute resolution service that costs you nothing to use, and will help us resolve any disagreements or finalise outstanding complaints. Their contact details are:</p><p><strong>[Enter contact detals here]</strong></p><br><h2>My duties to you</h2><p>I, Angel Chessum, am bound by the duties of the Financial Markets Conduct Act to:</p><ol type="1"><li>Meet the standards of competence, knowledge and skill set out in the Code of Conduct</li><li>Give priority to the clients&rsquo; interests and</li><li>To exercise care, diligence, and skill in regards to the advice we provide and</li><li>Meet the standards of ethical behavior, conduct, and client care set out in the Code of Conduct</li></ol><p>You can find more information by contacting us or visiting the Financial Markets Authority website at <a href="https://www.fma.govt.nz/">https://www.fma.govt.nz/</a>.</p></div><hr name="pagebreak" class="span.fr-deletable froala-page-break"><div class="section.old"><h1 id="108" name="108">Evaluating your options</h1><p>The recommendations contained in this report include appropriate insurances and levels of cover based on your personal risks and subsequent requirements. It is now up to you to decide whether you will protect all, part, or none of the risks I have identified.</p><h3 class="Margin-Gap">The options from here are as follows:</h3><ul class="pdf-color-bullet"><li>Proceed with the recommended level of cover</li><li>Proceed with variations to your recommended level of cover</li><li>Not proceed at this stage</li></ul><h3 class="Margin-Gap">If you decide to proceed:</h3><ul class="pdf-color-bullet"><li>It is vital that all information provided to the insurance company is accurate and contains full disclosure. Please refer to the &#39;Duty Of Disclosure&#39; section in this report for further information on your disclosure requirements</li><li>The process from here is based on factors that may change, but generally includes the following:<ul class="pdf-color-bullet"><li>Completion of an Application Form</li><li>Submission of the Application Form to the insurance company</li><li>Underwriting process during which time the insurance company may contact you (this may include the insurance company contacting your nominated doctor for further information)</li><li>Policy documents being sent to you from the insurance company</li></ul></li><li>It is important that once your insurance is put in place that we continue to review it to ensure that it continues to meet your needs as your life changes. This doesn&#39;t always mean taking out additional cover, but it does make sure the cover you have is appropriate for your needs. It is also a good opportunity to review any new products, as insurance companies often update their products to take into account changing lifestyles and improving medical practices.</li></ul></div><hr name="pagebreak" class="span.fr-deletable froala-page-break"><div class="section.old"><h1 id="109" name="109">Confirmation</h1><p class="Font-Bold text-align-center">I agree to the contents of the terms above with a signature or via a confirmation email to my adviser.</p><br><table class="pdf-table"><thead><tr class="pdf-table-heading3"><th>Client name:</th></tr></thead><tbody><tr><td><div style="height:100px">Signature:</div></td></tr></tbody><thead><tr class="pdf-table-heading3 no-border-bottom"><th>Date:</th></tr></thead></table></div><br><div class="section.old"><h1 id="110" name="110">Duty of disclosure</h1><h3>To help you meet your duty of disclosure, we recommend:</h3><ol><li>That you communicate to your adviser any information that you are unsure about. This includes letting your adviser know that you do not understand the question that you are being asked. You should consider asking questions to make sure you understand all the parts of the process and all the statements that you make in relation to your application. You may not be sure if you need to disclose an incident or an injury, you should consult your adviser.</li><li>That you consider getting a copy of your medical history from your doctor(s) in the event that you cannot remember an answer to one or more of the health-related questions.</li><li>That you understand that you have the right to your information. You can contact the provider to make sure that your information is correct. - It is your obligation to make sure that all information submitted in your application is correct. Therefore, you may save yourself from future problems by making sure that your information is correct at all times. If your circumstances change, it will be a good idea to contact your adviser and let them know of the change. An example of change would be a change in your employment. If you decide to become self-employed after some time, you should disclose this information. Communicating your changes is essential and building a lasting relationship and making sure you are protected.</li><li>To take the time to check all the information in your application is complete and correct. The extra time you put in now to make sure your information is correct could save you time in the future.</li><li>To cooperate with the insurance provider when they request for more information from you. This will help you process things faster and ease the process for both parties.</li></ol></div></div><p><br></p>
